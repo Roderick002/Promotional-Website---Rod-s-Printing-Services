@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +7,19 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/contact_us.css') }}">
   <title>Contact Us</title>
 </head>
-
 <body>
   <div class="container">
     <div class="text-center">
       <h1>Contact Us</h1>
       <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore <div>et dolore magra aliqua.
-        Ut enim ad minim veniam.</div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        <div>et dolore magra aliqua. Ut enim ad minim veniam.</div>
       </div>
     </div>
     <div class="content">
       <div class="col-1">
         <div class="address-line">
-          <img alt="location" href="{{ url_for('static', filename='images/contact_us/.css') images/marker.png" class="icon">
+          <img src="{{ url_for('static', filename='images/contact_us/images/marker.png') }}" alt="location" class="icon">
           <div class="contact-info">
             <div class="contact-info-title">Address</div>
             <div>1002 West 5th Ave,</div>
@@ -31,14 +28,14 @@
           </div>
         </div>
         <div class="address-line">
-          <img alt="location" src="image/phone.png" class="icon">
+          <img alt="location" src="{{ url_for('static', filename='images/phone.png') }}" class="icon">
           <div class="contact-info">
             <div class="contact-info-title">Phone</div>
             <div>12523-4566-8954-8956.</div>
           </div>
         </div>
         <div class="address-line">
-          <img alt="location" src="image/mail.png" class="icon">
+          <img alt="location" src="{{ url_for('static', filename='images/mail.png') }}" class="icon">
           <div class="contact-info">
             <div class="contact-info-title">Email</div>
             <div>contactemail@gmail.com</div>
@@ -73,7 +70,5 @@
       </div>
     </div>
   </div>
-
 </body>
-
 </html>
