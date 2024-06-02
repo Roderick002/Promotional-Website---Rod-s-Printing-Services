@@ -6,10 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/news.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/topBar.css') }}">
   <title>News</title>
 </head>
 
 <body>
+
+  {% include 'components/topBar.html' %}
+
   <h1>News!</h1>
 
 </body>

@@ -1,3 +1,14 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 5px 0;
+}
+
 body {
   font-family: Arial;
   background-image: url('/static/images/contact_us/shiny-night-city.jpg');
@@ -24,8 +35,10 @@ body {
 }
 
 .icon {
-  width: 50px; /* Adjust width */
-  height: 50px; /* Adjust height */
+  width: 50px;
+  /* Adjust width */
+  height: 50px;
+  /* Adjust height */
   background-color: white;
   border-radius: 30px;
   padding: 15px;
@@ -82,18 +95,21 @@ body {
     width: auto;
     padding: 30px;
   }
-   .col-1 {
+
+  .col-1 {
     width: 360px;
-  } 
+  }
 }
 
 @media all and (max-width: 700px) {
   .content {
     display: block;
   }
+
   .col-2 {
     margin-top: 40px;
-  } 
+  }
+
   .col-1 {
     width: 100%;
   }

@@ -1,0 +1,274 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+/* New Footer Top Section */
+.footer-top {
+		display: flex;
+		justify-content: space-between;
+		
+	
+}
+.footer-top {
+	position: relative; /* Add this line */
+}
+
+.footer-top::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0; /* Adjusted to start from the left edge */
+		width: 100%; /* Adjusted to span the entire width */
+		height: 2px; /* Adjust this value to set the thickness of the border */
+		background-color: white; /* Adjust this value to set the color of the border */
+}
+
+.footer-column {
+		text-align: center;
+		padding-left: 10%; /* Adjust percentage value as needed */
+		padding-right: 10%; /* Adjust percentage value as needed */
+		padding-bottom: 20px; /* Adjust percentage value as needed */
+		display: inline-flex;
+		margin-left: 4.25%; /* Adjust percentage value as needed */
+		margin-right: 5%; /* Adjust percentage value as needed */
+}
+
+
+.footer-column img {
+		width: 50px; /* Adjust as needed */
+		height: 50px; /* Adjust as needed */
+}
+
+.footer-column p {
+		color: #ffffff;
+		font-weight: bold;
+}
+
+* {
+	font-family: Open Sans;
+}
+
+.footer-distributed {
+		background: #16161d;
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+		box-sizing: border-box;
+		width: 100%;
+		text-align: center; /* Center the content of the footer */
+		font: bold 12px sans-serif;
+		padding: 10px; /* Remove padding from left and right */
+	
+}
+
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: #16161d;
+	color: #777777;
+}
+
+.footer-bottom .footer-left,
+.footer-bottom .footer-center,
+.footer-bottom .footer-right {
+	width: 33.333%;
+	text-align: center;
+}
+
+.footer-bottom .footer-left {
+	padding-left: 15px;
+}
+
+.footer-bottom .footer-right {
+	padding-right: 15px;
+}
+
+
+
+
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #777777;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: center;
+
+	
+}
+
+/* Footer Center */
+
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+	content: "|";
+	font-weight:300;
+	font-size: 20px;
+	left: 0;
+	color: #fff;
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+	content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+.footer-distributed .footer-left{
+	width: 20%;
+}
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+}
+.subscribe-form {
+	position: relative;
+	overflow: hidden;
+}
+.subscribe-form input {
+	width: 100%;
+	padding: 14px 28px;
+	background: #2E2E2E;
+	border: 1px solid #2E2E2E;
+	color: #fff;
+}
+.subscribe-form button {
+		position: absolute;
+		right: 0;
+		background: #ff5e14;
+		padding: 13px 20px;
+		border: 1px solid #ff5e14;
+		top: 0;
+}
+.subscribe-form button i {
+	color: #fff;
+	font-size: 22px;
+	transform: rotate(-6deg);
+}
+
+.left-align {
+		text-align: left;
+}
+
+.center-text{
+	color: white;
+	margin-top: -10px;
+	text-align: center;
+}
+.vertical-links {
+	padding: 0;
+	display: flex; /* Use flexbox */
+	flex-direction: column; /* Align items vertically */
+	text-align: center;
+}
+
+.vertical-links li {
+	display: block;
+}
+
+.vertical-links li a {
+	display: block;
+	text-decoration: none;
+	color: #303030; /* Default link color */
+	font-size: 15px;
+	color: #777777; /* Default link color */
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.vertical-links li a:before {
+	content: "\25B8"; /* Unicode for a small right-pointing arrow */
+	margin-right: 5px;
+}
+
+.vertical-links li a:hover {
+	color: white; /* Link color on hover */
+}
+.footer-distributed .footer-widget-heading h3 {
+		font-size: 25px; /* Adjust the font size as needed */
+}
