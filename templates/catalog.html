@@ -6,11 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/catalog.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/topBar.css') }}">
   <title>Catalog</title>
 </head>
 
 <body>
-  <h1>Catalog!</h1>
+
+  {% include 'components/topBar.html' %}
+
+  <section>
+    <div class="header">
+      <div class="header-bg">
+        <div class="c1"></div>
+        <div class="c0"></div>
+        <div class="c2"></div>
+        <div class="c0"></div>
+        <div class="c3"></div>
+        <div class="c0"></div>
+        <div class="c4"></div>
+        <div class="c0"></div>
+        <div class="c5"></div>
+        <div class="c0"></div>
+        <div class="c">CATALOG</div>
+      </div>
+    </div>
+  </section>
 
 </body>
 
