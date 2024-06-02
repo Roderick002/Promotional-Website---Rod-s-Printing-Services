@@ -1,6 +1,6 @@
 body {
   font-family: Arial;
-  background-image: url('image/bg.jpg');
+  background-image: url('/static/images/contact_us/shiny-night-city.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,6 +24,8 @@ body {
 }
 
 .icon {
+  width: 50px; /* Adjust width */
+  height: 50px; /* Adjust height */
   background-color: white;
   border-radius: 30px;
   padding: 15px;
@@ -54,7 +56,8 @@ body {
 }
 
 .contact-info-title {
-  color: #01bdd4;
+  color: cyan;
+  text-shadow: -1px -1px 0 teal, 1px -1px 0 teal, -1px 1px 0 teal, 1px 1px 0 teal;
 }
 
 .form-row {
@@ -91,8 +94,8 @@ body {
   .col-2 {
     margin-top: 40px;
   } 
-  .col-1{
-  width:100%;
+  .col-1 {
+    width: 100%;
   }
 }
 
