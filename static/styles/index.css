@@ -5,58 +5,8 @@ body {
     padding: 0;
 }
 
-h1, h2 {
+h2 {
     margin: 5px 0;
-}
-
-/* Top navigation bar */
-.top-nav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-.top-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.top-nav ul li {
-    float: left;
-    position: relative;
-}
-
-.top-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-.top-nav ul li a:hover,
-.top-nav ul li:hover .dropdown {
-    background-color: #111;
-}
-
-.dropdown {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.dropdown li {
-    float: none;
-}
-
-.dropdown li a {
-    padding: 12px 16px;
-}
-
-.top-nav ul li:hover .dropdown {
-    display: block;
 }
 
 /* Landing page styles */
@@ -95,6 +45,129 @@ h1, h2 {
     background-color: #333;
     color: white;
 }
+
+.banner {
+    margin: auto;
+    background-color: #292929;
+    height: 320px;
+    border-radius: 0 0 40px 40px;
+    display: flex;
+    flex-direction: row
+}
+
+.banner-extension {
+    margin: auto;
+    background-color: #292929;
+    height: 152px;
+    width: 30vw;
+    border-radius: 0 0 40px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.extension-line {
+    margin-top: 128px;
+    background-color: #424242;
+    height: 10px;
+    width: 24vw;
+    border-radius: 0 0 5px 5px;
+}
+
+.color-lines {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.yellow {
+    background-color: #FFE03F;
+    height: 24px;
+    width: 160px;
+}
+
+.magenta {
+    background-color: #BC007C;
+    height: 24px;
+    width: 160px;
+}
+
+.cyan {
+    background-color: #11ADFF;
+    height: 24px;
+    width: 160px;
+}
+
+.color-rounded {
+    margin: 0 0 auto auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+    padding: 40px 20px 0 0;
+}
+
+.rounded1 {
+    background-color: #FFE03F;
+    height: 20px;
+    width: 48px;
+    border-radius: 10px;
+}
+
+.rounded2 {
+    background-color: #2ACA3A;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.rounded3 {
+    background-color: #BC0C0C;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.bannerB {
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.banner-bG {
+    margin-top: 0;
+    height: 420px;
+    width: 68vw;
+    object-fit: cover;
+}
+
+.banner-lG {
+    position: absolute;
+    margin-top: 40px;
+    width: 880px;
+    padding-right: 56px;
+}
+
+.learn-more {
+    background-color: transparent;
+    position: absolute;
+    text-align: center;
+    padding: 6px 24px;
+    border-radius: 16px;
+    border-width: 1.5px;
+    margin-top: 344px;
+    margin-left: 720px;
+}
+
+.learn-more:hover {
+    background-color: #292929;
+    color: white;
+    cursor: pointer;
+}
+
 
 /* Catalog section styles */
 .catalog {

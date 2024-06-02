@@ -4,38 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <link rel=" stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/footer.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/topBar.css') }}">
   <title>Document</title>
 </head>
 
 <body>
-  <header>
-    <nav class="top-nav">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="catalog">Catalog</a></li>
-        <li><a href="news">News</a></li>
-        <li><a href="testimonials">Testimonials</a></li>
-        <li><a href="contact_us">Contact Us</a></li>
-        <li><a href="about_us">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
+
+  {% include 'components/topBar.html' %}
+
   <main>
+    <section>
+      <div class="banner">
+        <div class="color-lines">
+          <div class="yellow">
+          </div>
+          <div class="magenta">
+          </div>
+          <div class="cyan">
+          </div>
+        </div>
+        <div class="bannerB">
+          <img src="static/images/banner/bannerBG.svg" alt="logo-background" class="banner-bG">
+          <img src="static/images/banner/bannerLG.svg" alt="logo" class="banner-lG">
+          <button class="learn-more">Learn More</button>
+        </div>
+        <div class="color-rounded">
+          <div class="rounded1"></div>
+          <div class="rounded2"></div>
+          <div class="rounded3"></div>
+        </div>
+      </div>
+      <div class="banner-extension">
+        <div class="extension-line">
+        </div>
+      </div>
+    </section>
     <section id="home" class="landing-page">
-      <div class="branding">
-        <h1>Rod's Printing Services</h1>
-        <h2>Branding, Logo, Tagline</h2>
-        <p>Brief description</p>
-      </div>
-      <div class="highlights">
-        <h2>Products and Services Highlights</h2>
-        <ul>
-          <li><a href="catalog">Products</a></li>
-          <li><a href="catalog.html#services">Services</a></li>
-        </ul>
-      </div>
+
     </section>
 
     <section id="catalog" class="catalog">
@@ -57,8 +65,12 @@
     <section id="about_us" class="about">
       <!-- About Us content will be dynamically generated -->
     </section>
+
+    {% include 'components/footer.html' %}
+
   </main>
   <script src="scripts.js"></script>
+
 </body>
 
 </html>
