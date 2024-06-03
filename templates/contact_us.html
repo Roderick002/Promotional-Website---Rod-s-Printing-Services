@@ -17,71 +17,48 @@
 
   {% include 'components/topBar.html' %}
 
-  <div class="container">
-    <div class="text-center">
-      <h1>Contact Us</h1>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-        <div>et dolore magra aliqua. Ut enim ad minim veniam.</div>
+  <div class="contact-us-container">
+    <div class="row first-row">
+      <div class="column">
+        <h1>Contact Us</h1>
       </div>
     </div>
-    <div class="content">
-      <div class="col-1">
-        <div class="address-line">
-          <img src="{{ url_for('static', filename='images/contact_us/address.png') }}" alt="location" class="icon">
-          <div class="contact-info">
-            <div class="contact-info-title">Address</div>
-            <div>1002 West 5th Ave,</div>
-            <div>Alaska, New York,</div>
-            <div>55060.</div>
-          </div>
-        </div>
-        <div class="address-line">
-          <img alt="location" src="{{ url_for('static', filename='images/contact_us/phone.png') }}" class="icon">
-          <div class="contact-info">
-            <div class="contact-info-title">Phone</div>
-            <div>12523-4566-8954-8956.</div>
-          </div>
-        </div>
-        <div class="address-line">
-          <img alt="location" src="{{ url_for('static', filename='images/contact_us/email.png') }}" class="icon">
-          <div class="contact-info">
-            <div class="contact-info-title">Email</div>
-            <div>contactemail@gmail.com</div>
-          </div>
-        </div>
+    <div class="row first-row">
+      <div class="column">
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac.</span>
       </div>
-      <div class="col-2">
-        <form>
-          <div class="form-container">
-            <h2>Send Message</h2>
-            <div class="form-row">
-              <label>Full Name</label>
-              <div>
-                <input type="text" class="form-field">
-              </div>
-            </div>
-            <div class="form-row">
-              <label>Email</label>
-              <div>
-                <input type="text" class="form-field">
-              </div>
-            </div>
-            <div class="form-row">
-              <label>Type your message...</label>
-              <div>
-                <input type="text" class="form-field">
-              </div>
-            </div>
-            <input type="button" class="send-btn" value="Send">
-          </div>
+    </div>
+
+    <div class="row second-row">
+      <div class="column map-column">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086960352304!2d-122.41941548468133!3d37.77492927975924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c1cbd7611%3A0x5a4d5d7a38e2b5f0!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1593816820803!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+      <div class="column contact-info-column">
+        <h2>Contact Information</h2>
+        <p>Email: info@company.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Main St, San Francisco, CA 94101</p>
+      </div>
+      <div class="column form-column">
+        <h2>Send Us a Message</h2>
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
   </div>
-  {% include 'components/footer.html' %}
+
+  <div class="footer-container">
+    {% include 'components/footer.html' %}
+  </div>
+
   <script src="static/script/topBar.js"></script>
 </body>
-
 
 </html>
