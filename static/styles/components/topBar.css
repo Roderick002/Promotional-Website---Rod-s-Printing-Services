@@ -1,6 +1,13 @@
 .top-nav {
   background-color: #000000;
   overflow: hidden;
+  transition: top 0.3s ease; /* Add transition for smoother appearance */
+}
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%; /* Ensure the bar spans the entire width */
 }
 
 .top-nav ul {
