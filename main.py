@@ -8,6 +8,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/catalog_product')
+def catalog_product():
+    return render_template('catalog_product.html')
+
+
 @app.route('/catalog')
 def catalog():
     return render_template('catalog.html')
