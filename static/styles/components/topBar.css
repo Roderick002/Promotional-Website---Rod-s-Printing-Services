@@ -1,13 +1,23 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("static/fonts/Montserrat.ttf");
+}
+
+
+
 .top-nav {
   background-color: #000000;
   overflow: hidden;
-  transition: top 0.3s ease; /* Add transition for smoother appearance */
+  transition: top 0.3s ease;
+  /* Add transition for smoother appearance */
 }
+
 .fixed-nav {
   position: fixed;
   top: 0;
   z-index: 1000;
-  width: 100%; /* Ensure the bar spans the entire width */
+  width: 100%;
+  /* Ensure the bar spans the entire width */
 }
 
 .top-nav ul {
@@ -59,6 +69,8 @@ ul {
   justify-content: space-around;
   align-items: center;
   font-size: 15px;
+  font-family: Montserrat;
+  font-weight: bold;
 }
 
 .bossRodLogo {

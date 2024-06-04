@@ -5,12 +5,74 @@
     max-width: 1800px;
 }
 
-.product-description {
+.header {
+    margin: auto;
+    height: auto;
+    background-color: #F7F6F6;
+    max-width: 1600px;
+}
+
+.header-bg {
+    position: relative;
+    height: 520px;
+    background-color: #F7F6F6;
+    margin: auto;
+    border-top: 2em solid #F7F6F6;
+    border-bottom: 2em solid #F7F6F6;
+    border-right: 1.5em solid #F7F6F6;
+    border-left: 1.5em solid #F7F6F6;
     display: flex;
-    flex-direction: column;
-    margin-left: 160px;
-    padding-top: 120px;
-    text-align: left;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 100px auto;
+}
+
+.c0 {
+    background-color: #ECECEC;
+    width: 6.4%;
+}
+
+.c1 {
+    background-color: #F5DBE9;
+    width: 6.4%;
+}
+
+.c2 {
+    background-color: #D0DFE7;
+    width: 6.4%;
+}
+
+.c3 {
+    background-color: #F6F3E0;
+    width: 6.4%;
+}
+
+.c4 {
+    background-color: #F5DBE9;
+    width: 6.4%;
+}
+
+.c5 {
+    background-color: #D0DFE7;
+    width: 6.4%;
+}
+
+.banner-overlap {
+    position: absolute;
+    margin: auto;
+    padding-left: 12vw;
+    top: 220px;
+    display: flex;
+    gap: 25vw;
+}
+
+.banner-image {
+    transform: translate(0, -24%);
+}
+
+.border-line {
+    height: 24px;
+    background-color: #704F4F;
 }
 
 .product-description h1 {
@@ -37,7 +99,7 @@
 .product-information {
     margin: auto;
     padding-top: 160px;
-    max-width: 1800px;
+    max-width: 1348px;
     margin-bottom: 120px;
 }
 

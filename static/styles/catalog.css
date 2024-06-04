@@ -27,7 +27,7 @@ h2 {
 
 .header-bg {
     position: relative;
-    height: 480px;
+    height: 520px;
     background-color: #F7F6F6;
     margin: auto;
     border-top: 2em solid #F7F6F6;
@@ -47,17 +47,17 @@ h2 {
 }
 
 .c1 {
-    background-color: #E6007E;
+    background-color: #F5DBE9;
     width: 6.4%;
 }
 
 .c2 {
-    background-color: #2277A2;
+    background-color: #D0DFE7;
     width: 6.4%;
 }
 
 .c3 {
-    background-color: #EEE458;
+    background-color: #F6F3E0;
     width: 6.4%;
 }
 
