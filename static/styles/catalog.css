@@ -96,14 +96,18 @@ h2 {
 }
 
 .grid-item .image {
-    background-color: #F3F3F3;
+    border-color: darkgray;
     width: 240px;
     height: 240px;
+    border-radius: 12px;
+    transition: 0.5s ease;
 }
 
 .image:hover {
-    background-color: #ECECEC;
+    filter: brightness(0.9);
     cursor: pointer;
+    transform: translateY(-15px);
+
 }
 
 .grid-item h5 {

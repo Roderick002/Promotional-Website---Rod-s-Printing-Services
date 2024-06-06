@@ -8,9 +8,26 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/catalog_product')
+@app.route('/catalog_product_document_print')
+@app.route('/catalog_product_photo_print')
+@app.route('/catalog_product_photocopy')
+@app.route('/catalog_product_invitation')
+@app.route('/catalog_product_id_picture')
+@app.route('/catalog_product_lamination')
+@app.route('/catalog_product_framed_picture')
+@app.route('/catalog_product_printer')
 def catalog_product():
     return render_template('catalog_product.html')
+
+
+@app.route('/catalog_services_printer_repair')
+@app.route('/catalog_services_ciss_installation')
+@app.route('/catalog_services_defective_printer')
+@app.route('/catalog_services_online_appointment')
+@app.route('/catalog_services_resume_maker')
+@app.route('/catalog_services_photo_editing')
+def catalog_services():
+    return render_template('catalog_services.html')
 
 
 @app.route('/catalog')

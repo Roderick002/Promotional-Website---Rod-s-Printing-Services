@@ -19,7 +19,6 @@
   width: 100%;
   /* Ensure the bar spans the entire width */
 }
-
 .top-nav ul {
   list-style-type: none;
   margin: 0;
@@ -28,21 +27,29 @@
 
 .top-nav ul li {
   float: left;
-  position: relative
+  position: relative;
 }
 
 .top-nav ul li a {
   display: block;
-  color: white;
+  color: white; /* Default font color */
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
 }
 
-.top-nav ul li a:hover,
+.top-nav ul li a:hover {
+  color: #E6007E/* Change this to the desired hover font color */
+}
+
+
+/* Keep the background color change for the dropdown on hover */
 .top-nav ul li:hover .dropdown {
   background-color: #111;
 }
+
+
+
 
 .dropdown {
   display: none;

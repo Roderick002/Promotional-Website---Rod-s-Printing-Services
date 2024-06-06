@@ -2,6 +2,30 @@ const nav = document.getElementById('topNav');
 let lastScrollTop = 0;
 let isNavVisible = true; // Track if the nav is currently visible
 
+const home = document.getElementById('home');
+const catalog = document.getElementById('catalog');
+const news = document.getElementById('news');
+const testimonials = document.getElementById('testimonials');
+const contactUs = document.getElementById('contact-us');
+const aboutUs = document.getElementById('about-us');
+
+
+const highlight = window.location.href
+
+if (highlight.includes('catalog')) {
+    catalog.style.color = '#E6007E';
+} else if (highlight.includes('news')) {
+    news.style.color = '#E6007E';
+} else if (highlight.includes('testimonials')) {
+    testimonials.style.color = '#E6007E';
+} else if (highlight.includes('contact_us')) {
+    contactUs.style.color = '#E6007E';
+} else if (highlight.includes('about_us')) {
+    aboutUs.style.color = '#E6007E';
+} else {
+    home.style.color = '#E6007E';
+}
+
 window.addEventListener('scroll', function() {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 

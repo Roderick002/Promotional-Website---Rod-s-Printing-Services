@@ -63,7 +63,7 @@
     padding-left: 12vw;
     top: 220px;
     display: flex;
-    gap: 25vw;
+    gap: 2vw;
 }
 
 .banner-image {
@@ -73,6 +73,10 @@
 .border-line {
     height: 24px;
     background-color: #704F4F;
+}
+
+.product-description {
+    width: 600px;
 }
 
 .product-description h1 {
@@ -107,30 +111,77 @@
     margin: 0 120px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
-.product-images h5 {
+.product-images h2 {
     position: absolute;
-    transform: translate(18px, -48px);
+    transform: translate(18px, -56px);
 }
 
-.col-1 {
+.carousel-container {
+    width: 64%;
+    max-width: 800px;
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    display: none;
+    border-radius: 8px;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-thumbnails {
     display: flex;
-    flex-direction: column;
-    gap: 32px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.sample1 {
-    background-color: #f3f3f3;
-    height: 320px;
-    width: 640px;
+
+.thumbnail {
+    width: 100px;
+    height: 60px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    border-radius: 8px;
 }
 
-.col2 {
-    background-color: #f3f3f3;
-    height: 672px;
-    width: 420px;
-    margin-left: auto;
+.thumbnail:hover,
+.thumbnail.active {
+    opacity: 1;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: - 200px;
+    transform: translateY(-100px);
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #717171;
 }
 
 .product-details {
