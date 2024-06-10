@@ -40,3 +40,17 @@ document.getElementById('resume-maker').addEventListener('click', function() {
 document.getElementById('photo-editing').addEventListener('click', function() {
   window.location.href = '/catalog_services_photo_editing';
 });
+
+// Store the scroll position in session storage when navigating away from the page
+window.addEventListener('beforeunload', function() {
+    sessionStorage.setItem('scrollPosition', window.scrollY);
+});
+
+// Restore the scroll position when navigating back to the page
+window.addEventListener('DOMContentLoaded', function() {
+    var scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition !== null) {
+        window.scrollTo(0, parseInt(scrollPosition));
+        sessionStorage.removeItem('scrollPosition');
+    }
+});

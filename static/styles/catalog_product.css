@@ -86,12 +86,13 @@
 #avail-now {
     background-color: transparent;
     text-align: center;
+    margin-left: 200px;
     margin-top: 16px;
-    padding: 6px 24px;
+    padding: 4px 32px;
     border-radius: 16px;
     border-width: 1.5px;
     width: 180px;
-
+    font-size: 1.125rem;
 }
 
 #avail-now:hover {
@@ -185,11 +186,25 @@
 }
 
 .product-details {
-    padding: 0 120px;
+    padding: 0 160px;
     margin-top: 64px;
     margin-left: 12px;
 }
 
 .product-details h5 {
     margin-bottom: 16px;
+}
+
+.product-details p {
+    text-align: justify;
+    text-indent: 1in;
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+#product-description {
+    text-align: justify;
+    text-indent: 1in;
+    font-weight: 400;
+    margin: 12px auto;
 }

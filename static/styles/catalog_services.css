@@ -86,11 +86,13 @@
 #avail-now {
   background-color: transparent;
   text-align: center;
+  margin-left: 200px;
   margin-top: 16px;
-  padding: 6px 24px;
+  padding: 4px 32px;
   border-radius: 16px;
   border-width: 1.5px;
   width: 180px;
+  font-size: 1.125rem;
 
 }
 
@@ -192,4 +194,18 @@
 
 .services-details h5 {
   margin-bottom: 16px;
+}
+
+.services-details p {
+    text-align: justify;
+    text-indent: 1in;
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+#services-description {
+  text-align: justify;
+  text-indent: 1in;
+  font-weight: 400;
+  margin: 12px auto;
 }

@@ -23,7 +23,7 @@ function nextImage() {
 }
 
 function startAutoSwitch() {
-    autoSwitchInterval = setInterval(nextImage, 5000);
+    autoSwitchInterval = setInterval(nextImage, 3000);
 }
 
 function resetInterval() {
