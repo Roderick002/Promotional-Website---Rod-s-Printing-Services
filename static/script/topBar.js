@@ -26,6 +26,8 @@ if (highlight.includes('catalog')) {
     home.style.color = '#E6007E';
 }
 
+
+
 window.addEventListener('scroll', function() {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -56,3 +58,5 @@ window.addEventListener('scroll', function() {
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
+
+

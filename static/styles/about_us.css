@@ -8,3 +8,120 @@ body {
 h2 {
     margin: 5px 0;
 }
+#about-us-title {
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: inline-block;
+    letter-spacing: -7px;
+    font-size: 80px;
+    font-style: italic;
+    -webkit-text-stroke: 5px black; 
+}
+
+#about-us-description {
+    position: absolute;
+    top: 260px; /* Adjust this value as needed to position it below the title */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: inline-block;
+    font-size: 40px;
+    letter-spacing: -2px;
+    font-style: italic;
+    -webkit-text-stroke: 2.5px black; 
+}
+
+
+.black-bg-about-us{
+    height: 320px;
+    background-color: #292929;
+}
+
+.vertical-stripes {
+    display: flex;
+    height: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
+    gap: 60px;
+}
+
+.stripe {
+    flex: 1;
+    color: white;
+}
+
+.stripe:nth-child(1) { background-color: #11ADFF; }
+.stripe:nth-child(2) { background-color: #FFE03F; }
+.stripe:nth-child(3) { background-color: #E6007E; color: black; }
+.stripe:nth-child(4) { background-color: #11ADFF; }
+.stripe:nth-child(5) { background-color: #FFE03F; }
+.stripe:nth-child(6) { background-color: #E6007E; color: black; }
+.stripe:nth-child(7) { background-color: #11ADFF; }
+.stripe:nth-child(8) { background-color: #FFE03F; }
+.stripe:nth-child(9) { background-color: #E6007E; }
+
+
+#team-name{
+    font-size: 60px;
+}
+
+#team-description{
+    position: absolute;
+    font-size: 30px;
+    top: 542.5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.team-layout {
+    text-align: center; /* Center align the content */
+
+    margin-top: 75px;
+}
+
+.team-column-container {
+    display: flex;
+    justify-content: center; /* Center align the columns horizontally */
+    width: 50%;
+    margin: 0 auto; /* Set left and right margins to auto to center the container */
+    height: 500px;
+    padding-top: 20px;
+}
+
+.team-column {
+    flex: 1; /* Distribute equal space among columns */
+    background-color: #f2f2f2; /* Background color for columns (adjust as needed) */
+    margin: 0; /* Add some margin between columns */
+}
+.team1{
+    background-color: #F3F3F3;
+}
+.team2{
+    background-color: #DEDEDE;
+}
+
+
+#mission-name{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#mission-description{
+    position: absolute;
+    font-size: 30px;
+    top: 1200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.mission-layout {
+    text-align: center; /* Center align the content */
+    padding-bottom: 30px;
+    margin-top: 75px;
+}

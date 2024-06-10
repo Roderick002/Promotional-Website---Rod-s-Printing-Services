@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 /* General styles */
 body {
     font-family: Arial, sans-serif;
@@ -7,4 +8,312 @@ body {
 
 h2 {
     margin: 5px 0;
+}
+
+#testimonials-title {
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: inline-block;
+    letter-spacing: -7px;
+    font-size: 80px;
+    font-style: italic;
+    -webkit-text-stroke: 5px black; 
+}
+
+#testimonials-description {
+    position: absolute;
+    top: 260px; /* Adjust this value as needed to position it below the title */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: inline-block;
+    font-size: 40px;
+    letter-spacing: -2px;
+    font-style: italic;
+    -webkit-text-stroke: 2.5px black; 
+}
+
+.black-bg-testimonials{
+    height: 320px;
+    background-color: #292929;
+}
+
+.why-choose-layout {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-choose-column-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.why-choose-column {
+    width: 400px;
+    height: 350px; /* Adjust height as needed */
+    background-color: #fff9ac;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1;
+    overflow: hidden; /* Ensure content inside doesn't overflow */
+}
+
+.featured-review-box {
+    padding: 20px;
+}
+
+.featured-reviewer-image {
+    text-align: center;
+    margin-bottom: -35px;
+    z-index: 2;
+}
+
+.featured-reviewer-image img {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    border-radius: 50%; /* Make it a circle */
+}
+.review-info {
+    margin-top: 10px;
+    background-color: white;
+    height: 280px;
+    padding: 20px; /* Add padding to create space around the content */
+}
+
+.reviewer-name {
+    margin-top: 15px; /* Adjust margin as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the name bold */
+    color: #333; /* Adjust color as needed */
+    z-index: 2;
+}
+
+.why-choose-name {
+    color: #333; /* Adjust the color as needed */
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+.why-choose-description {
+    color: #666; /* Adjust the color as needed */
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+/* CSS for the "Mission" section */
+.reviews-layout {
+    text-align: center; /* Center align the content */
+    margin-top: 50px; /* Adjust as needed */
+}
+
+#reviews-name {
+    color: #333; /* Adjust the color as needed */
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+#customer-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    padding-bottom: 50px;
+}
+.customer-section-heading{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customer-section-heading h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+.customer-section-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100%;
+}
+.customer-section-box{
+    width:500px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.profile-img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.name-user span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+.reviews{
+    color: #f9d71c;
+}
+.customer-section-box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.client-comment p{
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+.customer-section-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+@media(max-width:1060px){
+    .customer-section-box{
+        width:45%;
+        padding: 10px;
+    }
+}
+@media(max-width:790px){
+    .customer-section-box{
+        width:100%;
+    }
+    .customer-section-heading h1{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:340px){
+    .customer-section-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-top: 10px;
+    }
+}
+::selection{
+    color: #ffffff;
+    background-color: #252525;
+}
+
+.
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 20px;
+    width: 450px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 6px;
+    -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1)
+}
+
+.comment-box{
+
+    padding:5px;
+}
+
+
+
+.comment-area textarea{
+   resize: none; 
+        border: 1px solid #ad9f9f;
+}
+
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ffffff;
+    outline: 0;
+    box-shadow: 0 0 0 1px rgb(255, 0, 0) !important;
+}
+
+.send {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.send:hover {
+    color: #fff;
+    background-color: #f50202;
+    border-color: #f50202;
+}
+
+
+.rating {
+ display: flex;
+        margin-top: -10px;
+    flex-direction: row-reverse;
+    margin-left: -4px;
+        float: left;
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
+        position: relative;
+    width: 19px;
+    font-size: 25px;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
 }

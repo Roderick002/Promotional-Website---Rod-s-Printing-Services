@@ -7,10 +7,12 @@ ul {
 		position: relative;
 		border-top-left-radius: 60px;  /* Adjust the value as needed */
 		border-top-right-radius: 60px; /* Adjust the value as needed */
+		margin-top: auto; /* Push the footer to the bottom */
 		
 }
 
 .background-black-printer {
+	margin-top: -220px;
 	background: black;
 	z-index: -1;
 	height: 230px;
