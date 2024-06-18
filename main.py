@@ -57,7 +57,7 @@ def terms_conditions():
 
 @app.route('/privacy_policy')
 def privacy_policy():
-    return render_template('privacy_policy.html')
+    return render_template('/Footer-menu/privacy_policy.html')
 
 @app.route('/contact_us')
 def contact_us():
