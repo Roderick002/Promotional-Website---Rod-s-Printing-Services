@@ -31,9 +31,6 @@ if (highlight.includes('catalog')) {
 window.addEventListener('scroll', function() {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (avail.style.visibility == 'visible') {
-        document.body.style.paddingTop = 0;
-    }
     if (currentScroll > lastScrollTop) {
         // Scroll down
         if (isNavVisible) {
@@ -59,7 +56,5 @@ window.addEventListener('scroll', function() {
         }
     }
 
-
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
-
