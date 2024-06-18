@@ -2,6 +2,8 @@ const nav = document.getElementById('topNav');
 let lastScrollTop = 0;
 let isNavVisible = true; // Track if the nav is currently visible
 
+const avail = document.getElementById('avail-now');
+
 const home = document.getElementById('home');
 const catalog = document.getElementById('catalog');
 const news = document.getElementById('news');
@@ -9,9 +11,8 @@ const testimonials = document.getElementById('testimonials');
 const contactUs = document.getElementById('contact-us');
 const aboutUs = document.getElementById('about-us');
 
-
-const highlight = window.location.href
-
+// Highlight the current page menu item
+const highlight = window.location.href;
 if (highlight.includes('catalog')) {
     catalog.style.color = '#E6007E';
 } else if (highlight.includes('news')) {
@@ -27,10 +28,12 @@ if (highlight.includes('catalog')) {
 }
 
 
-
 window.addEventListener('scroll', function() {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
+    if (avail.style.visibility == 'visible') {
+        document.body.style.paddingTop = 0;
+    }
     if (currentScroll > lastScrollTop) {
         // Scroll down
         if (isNavVisible) {
@@ -56,7 +59,7 @@ window.addEventListener('scroll', function() {
         }
     }
 
+
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
-
 

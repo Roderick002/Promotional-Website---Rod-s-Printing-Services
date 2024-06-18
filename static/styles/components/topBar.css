@@ -7,18 +7,20 @@
 
 .top-nav {
   background-color: #000000;
-  overflow: hidden;
   transition: top 0.3s ease;
+  z-index: 99;
   /* Add transition for smoother appearance */
+
 }
 
 .fixed-nav {
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 99;
   width: 100%;
   /* Ensure the bar spans the entire width */
 }
+
 .top-nav ul {
   list-style-type: none;
   margin: 0;
@@ -32,14 +34,16 @@
 
 .top-nav ul li a {
   display: block;
-  color: white; /* Default font color */
+  color: white;
+  /* Default font color */
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
 }
 
 .top-nav ul li a:hover {
-  color: #E6007E/* Change this to the desired hover font color */
+  color: #E6007E
+    /* Change this to the desired hover font color */
 }
 
 

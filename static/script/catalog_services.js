@@ -16,10 +16,16 @@ if (link.includes("printer_repair")) {
     title.textContent = "Printer Repair";
     description.textContent = "When your printer encounters issues, our expert repair services are here to help. We specialize in diagnosing and fixing a wide range of printer problems, from paper jams and connectivity issues to hardware malfunctions and software glitches. We provide efficient repairs to get your printer up and running smoothly again.";
     specs.textContent = "For expert printer repair services, our pricing is flexible and dependent on the specific issue and any necessary parts replacement. Repair costs range from ₱300.00 to ₱1,200.00, ensuring affordability and transparency in addressing your printer's needs. Whether it's resolving paper jams, fixing connectivity issues, or replacing worn-out components, our skilled technicians provide efficient solutions tailored to your printer's requirements. Rest assured, we prioritize quality repairs and customer satisfaction, striving to restore your printer's functionality at a reasonable price. Contact us today for reliable printer repair services you can trust.";
+
+    setServicesSnapshots("printer_repair");
+    
 } else if (link.includes("ciss_installation")) {
     title.textContent = "Continuous Ink Supply System (CISS) Installation";
     description.textContent = "Experience uninterrupted printing with our professional CISS installation service. CISS is a cost-effective and convenient solution that replaces traditional ink cartridges with refillable ink tanks, allowing for continuous ink flow to your printer. With CISS, you'll enjoy significant savings on ink costs and reduced downtime due to frequent cartridge changes.";
     specs.textContent = "Upgrade your Canon printer with our expert Continuous Ink Supply System (CISS) installation service, starting at a base price of ₱1,200.00. Our skilled technicians specialize in Canon printer models, including Pixma TS207, IP2770, MP237, MP258, MP276, MP287, MG2570, MG3070, E470, E4270, and more. Whether you're looking to reduce printing costs or enhance efficiency, CISS installation offers continuous ink flow and eliminates the need for frequent cartridge replacements. Prices may vary depending on the printer model and location for home service, with rates extending up to ₱2,000.00. Experience seamless printing and cost savings with our professional CISS installation service tailored to your Canon printer.";
+    
+    setServicesSnapshots("ciss_installation");
+    
 } else if (link.includes("photo_editing")) {
     title.textContent = "Photo Editing";
     description.textContent = " Transform your photos into stunning works of art with our professional photo editing services. Whether you need retouching, color correction, background removal, or creative enhancements, our skilled editors utilize industry-leading software to bring out the best in your images. With quick turnaround times and affordable rates, we ensure your photos stand out and make a lasting impression.";
@@ -36,16 +42,23 @@ if (link.includes("printer_repair")) {
     title.textContent = "Sell Your Defective Printer";
     description.textContent = "We specialize in purchasing defective printers, providing a hassle-free solution for those looking to offload non-functional or problematic devices. Whether your printer has print quality issues, connectivity problems, or other malfunctions, we offer fair prices based on its condition and potential for refurbishment or parts.";
     specs.textContent = "Looking to offload your defective printer? We're here to help! We specialize in purchasing defective printers directly from customers like you. Whether your printer has print quality issues, connectivity problems, or other malfunctions, we're interested in buying it. Our pricing varies based on the specific model and issue, ranging from ₱300.00 to ₱1,200.00. Selling your defective printer to us not only frees up space but also ensures that it's disposed of responsibly. Plus, you'll receive cash in return, which you can put towards a new printer or any other needs. If you have a defective printer that you're looking to sell, contact us today for a quote and hassle-free transaction!";
-    image1.src = imageSrc("printer", "1");
-    image2.src = imageSrc("printer", "2");
-    image3.src = imageSrc("printer", "3");
-    image4.src = imageSrc("printer", "4");
-    img1.src = imageSrc("printer", "1");
-    img2.src = imageSrc("printer", "2");
-    img3.src = imageSrc("printer", "3");
-    img4.src = imageSrc("printer", "4");
+    
+    setServicesSnapshots("defective_printer");
 }
 
 function imageSrc(service, serviceNo) {
     return ('static/images/catalog_services/' + service + '/service_' + serviceNo + '.jpg');
+}
+
+function setServicesSnapshots(service){
+    image1.src = imageSrc(service, "1");
+    image2.src = imageSrc(service, "2");
+    image3.src = imageSrc(service, "3");
+    image4.src = imageSrc(service, "4");
+    image5.src = imageSrc(service, "5");
+    img1.src = image1.src
+    img2.src = image2.src
+    img3.src = image3.src
+    img4.src = image4.src
+    img5.src = image5.src
 }

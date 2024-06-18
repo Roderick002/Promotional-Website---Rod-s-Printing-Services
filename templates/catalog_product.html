@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/catalog_product.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/avail.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/topBar.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/footer.css') }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -15,9 +16,8 @@
 </head>
 
 <body>
-
+  {% include 'components/avail.html' %}
   {% include 'components/topBar.html' %}
-
   <section class="banner">
     <div class="header">
       <div class="header-bg">
@@ -36,7 +36,7 @@
         <div class="product-description">
           <h1 id="product-name">Product Name</h1>
           <h5 id="product-description">description</h5>
-          <button id='avail-now'>Avail Now</button>
+          <button id='avail-now' onclick="showAvailForm()">Avail Now</button>
         </div>
         <div class="banner-image">
           <img src="static/images/catalog_product/cP-banner-image.svg" alt="Printer" />
@@ -54,13 +54,15 @@
           <img id="image2" src="static/images/defaultIcon.png" alt="Image 2" class="carousel-image">
           <img id="image3" src="static/images/defaultIcon.png" alt="Image 3" class="carousel-image">
           <img id="image4" src="static/images/defaultIcon.png" alt="Image 4" class="carousel-image">
+          <img id="image5" src="static/images/defaultIcon.png" alt="Image 5" class="carousel-image">
           <!-- Add more images as needed -->
         </div>
         <div class="carousel-thumbnails">
           <img id="img1" src="static/images/defaultIcon.png" alt="Thumbnail 1" class="thumbnail" onclick="showImage(0)">
           <img id="img2" src="static/images/defaultIcon.png" alt="Thumbnail 2" class="thumbnail" onclick="showImage(1)">
           <img id="img3" src="static/images/defaultIcon.png" alt="Thumbnail 3" class="thumbnail" onclick="showImage(2)">
-          <img id="img4" src="static/images/defaultIcon.png" alt="Thumbnail 3" class="thumbnail" onclick="showImage(3)">
+          <img id="img4" src="static/images/defaultIcon.png" alt="Thumbnail 4" class="thumbnail" onclick="showImage(3)">
+          <img id="img5" src="static/images/defaultIcon.png" alt="Thumbnail 5" class="thumbnail" onclick="showImage(4)">
           <!-- Add more thumbnails as needed -->
         </div>
         <div class="carousel-dots">
@@ -68,6 +70,7 @@
           <span class="dot" onclick="showImage(1)"></span>
           <span class="dot" onclick="showImage(2)"></span>
           <span class="dot" onclick="showImage(3)"></span>
+          <span class="dot" onclick="showImage(4)"></span>
           <!-- Add more dots as needed -->
         </div>
       </div>
@@ -84,12 +87,13 @@
         laborum.
       </p>
     </div>
+    
   </section>
-
 
   {% include 'components/footer.html' %}
   <script src="static/script/topBar.js"></script>
   <script src="static/script/catalog_product.js"></script>
+  <script src="static/script/avail.js"></script>
   <script src="static/script/carousel.js"></script>
 
 

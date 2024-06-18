@@ -2,6 +2,7 @@ const image1 = document.getElementById('image1');
 const image2 = document.getElementById('image2');
 const image3 = document.getElementById('image3');
 const image4 = document.getElementById('image4');
+const image5 = document.getElementById('image5');
 const img1 = document.getElementById('img1');
 const img2 = document.getElementById('img2');
 const img3 = document.getElementById('img3');
@@ -44,16 +45,23 @@ if (link.includes("document_print")) {
     title.textContent = "Printer";
     description.textContent = "Elevate your printing experience with our range of reliable and versatile printers. Designed for home, office, or commercial use, our printers deliver exceptional quality, efficiency, and convenience. Whether you need crisp black-and-white documents, vibrant color prints, or high-resolution photos, our printers provide outstanding results every time.";
     specs.textContent = "Transform your printing experience with our converted Continuous Ink Supply System (CISS) printers, offering cost-effective and efficient solutions for all your printing needs. Experience uninterrupted printing with models such as the Canon Pixma IP2770 for ₱2,500.00, the Canon Pixma MP237 for ₱3,500.00, or the Canon Pixma MP276 and MP258 for ₱3,800.00. For more advanced features, consider the Canon Pixma MP287 for ₱4,000.00. Please note that our list is subject to updates depending on stock availability. With CISS conversion, you'll enjoy hassle-free printing, reduced ink costs, and continuous operation, making these printers the perfect choice for home, office, or business use."
-    image1.src = imageSrc("printer", "1");
-    image2.src = imageSrc("printer", "2");
-    image3.src = imageSrc("printer", "3");
-    image4.src = imageSrc("printer", "4");
-    img1.src = imageSrc("printer", "1");
-    img2.src = imageSrc("printer", "2");
-    img3.src = imageSrc("printer", "3");
-    img4.src = imageSrc("printer", "4");
+
+    setProductSnapshots("printer");
 }
 
 function imageSrc(product, productNo) {
     return ('static/images/catalog_product/' + product + '/product_' + productNo + '.jpg');
+}
+
+function setProductSnapshots(product){
+    image1.src = imageSrc(product, "1");
+    image2.src = imageSrc(product, "2");
+    image3.src = imageSrc(product, "3");
+    image4.src = imageSrc(product, "4");
+    image5.src = imageSrc(product, "5");
+    img1.src = image1.src
+    img2.src = image2.src
+    img3.src = image3.src
+    img4.src = image4.src
+    img5.src = image5.src
 }
