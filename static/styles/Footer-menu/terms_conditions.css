@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  margin-top: 1.5em;
+}
+p {
+  margin-bottom: 1.5em;
+}
+ul {
+  margin-bottom: 1.5em;
+}

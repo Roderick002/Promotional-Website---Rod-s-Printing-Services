@@ -51,5 +51,17 @@ def about_us():
     return render_template('about_us.html')
 
 
+@app.route('/terms_conditions')
+def terms_conditions():
+    return render_template('/Footer-menu/terms_conditions.html')
+
+@app.route('/privacy_policy')
+def privacy_policy():
+    return render_template('privacy_policy.html')
+
+@app.route('/contact_us')
+def contact_us():
+    return render_template('contact_us.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
