@@ -7,28 +7,29 @@ const body = document.body;
 const loc = window.location.href;
 
 if (loc.includes('product')) {
-  header.textContent = "Avail " + product.textContent;
+  header.textContent = product.textContent + " - Avail";
 } else if (loc.includes('installation')) {
-  header.textContent = "Avail CISS Installation";
+  header.textContent = "CISS Installation - Avail";
 } else {
-  header.textContent = "Avail " + services.textContent;
+  header.textContent = services.textContent + " - Avail";
 }
 
-
+document.getElementById('close').addEventListener('click', function() {
+  availForm.style.visibility = 'hidden';
+  body.style.overflowY = 'scroll';
+  body.style.paddingRight = '0';
+});
 
 let scrollPosition = 0;
 
 function showAvailForm() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   availForm.style.visibility = 'visible';
   scrollPosition = window.scrollY; // Save current scroll position
   body.classList.add('no-scroll'); // Add no-scroll class to body
   body.style.top = `-${scrollPosition}px`; // Maintain scroll position visually
+  body.style.overflowY = 'hidden'; // Hide vertical scrollbar'
+  body.style.paddingRight = '1.2vw';
 }
 
-function cancelAvail() {
-  availForm.style.visibility = 'hidden';
-  body.classList.remove('no-scroll'); // Remove no-scroll class
-  body.style.top = ''; // Reset top style
-  window.scrollTo(0, scrollPosition); // Restore scroll position
-}
 

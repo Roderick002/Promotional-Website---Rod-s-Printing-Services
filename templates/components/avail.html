@@ -1,46 +1,70 @@
 <div class="avail-form" id="avail-visibility">
+  <div class="avail-header">
+    <p id="avail-item">Availability Form</p>
+    <img id="close" src="static/images/icons/x.svg" alt="close button" />
+  </div>
   <div class="avail-container">
-    <h1 id="avail-item">Availability Form</h1>
     <form action="/avail" method="post">
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>   
+      <div class="personal-info">
+        <h4>PERSONAL INFORMATION</h4>
+        <div>
+          <input type="text" id="name" name="name" required placeholder="Name">
+        </div>
+        <div class="contact">
+          <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
+          <input type="email" id="email" name="email" required placeholder="Email">
+        </div>
       </div>
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+      <div class="specifications">
+        <h4>SPECIFICATIONS</h4>
+        <div class="specs">
+          <div class="c-one">
+            <div class="sizes">
+              <p>SIZE <span>(IF APPLIES)</span></p>
+              <select id="size">
+                <option value="" disabled selected>Choose Size</option>
+                <option value="Letter">Letter (8.5"x11")</option>
+                <option value="Legal">Legal (8.5"x11")</option>
+                <option value="A4">A4 (8.3"x11.7")</option>
+                <option value="4R">4R (4"x6")</option>
+                <option value="3R">3R (3.5"x5"</option>
+              </select>
+            </div>
+            <div class="colors">
+              <p>COLOR <span>(IF APPLIES)</span></p>
+              <select id="color">
+                <option value="" disabled selected>Choose Color</option>
+                <option value="Colored">Colored</option>
+                <option value="Monochrome">Monochrome</option>
+              </select>
+            </div>
+            <div class="files">
+              <p>INSERT FILE <span>(IF APPLIES)</span></p>
+              <input type="file" id="insert-file" name="insert-file">
+            </div>
+          </div>
+          <div class="quantities">
+            <p>QUANTITY</p>
+            <input type="number" id="quantity" name="quantity" required>
+          </div>
+          <div class="descriptions">
+            <p>NOTE</p>
+            <textarea id="description" name="description" placeholder="Add description..."></textarea>
+          </div>
+        </div>
       </div>
-      <div>
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required>
+      <div class="delivery">
+        <h4>DELIVERY/HOME SERVICE <span style="color: #FF4F4F;">(OPTIONAL)</span></h4>
+        <div>
+          <input type="text" id="address" name="address" placeholder="Address">
+        </div>
+        <div>
+          <p>When do you need the item(s)?</p>
+          <input type="time" id="time" name="time" placeholder="Select Time">
+          <input type="date" id="date" name="date" placeholder="Select Date">
+        </div>
       </div>
-      <div>
-        <label for="address">Address: (For delivery/ home service)</label>
-        <input type="text" id="address" name="address" required>
-      </div>
-      <div>
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" required>
-      </div>
-      <div>
-        <label for="insert-file">Insert File: (If Any)</label>
-        <input type="file" id="insert-file" name="insert-file">
-      </div>
-      <div>
-        <label for="description">Description:</label>
-        <input type="text" id="description" name="description" required>
-      </div>
-      <p>When do you need the item(s)?</p>
-      <div>
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
-      </div>
-      <div>
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time" required>
-      </div>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Confirm Order" id="submit">
     </form>
-    <button onclick="cancelAvail()">Cancel</button>
   </div>
 </div>

@@ -1,25 +1,221 @@
 .avail-form {
-  background-color: rgba(205, 205, 205, 0.3);
+  backdrop-filter: blur(4px);
   visibility: hidden;
   position: fixed;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
+
+  font-family: sans-serif;
 }
 
 .avail-container {
-  background-color: #fff;
-  border-radius: 16px;
-  padding: 16px;
+  overflow-y: scroll;
+  border: #000 solid 2px;
+  border-top: none;
+  background-color: #FDFDFD;
+  padding: 16px 24px;
   width: 500px;
   height: 600px;
   display: flex;
   flex-direction: column;
 }
 
+.avail-header {
+  border: #000 solid 2px;
+  background-color: #FF5AB3;
+  border-radius: 24px 24px 0 0;
+  width: 500px;
+  display: flex;
+  padding: 0 20px;
+  font-size: 0.9em;
+}
+
+#close {
+  margin-left: auto;
+  width: 14px;
+  margin-right: 4px;
+}
+
+#close:hover {
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+
 #avail-item {
   text-align: center;
+  vertical-align: center;
+  margin: auto 0;
+  padding: 8px 0;
+  color: #FFF;
+  font-weight: 600;
 }
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 8px;
+  height: 132px;
+  border-bottom: #3FBAFF solid 0.13em;
+}
+
+.personal-info h4,
+.specifications h4,
+.delivery h4 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  background-color: #EDEDED;
+  border: #D0D0D0 solid 1px;
+  height: 32px;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+#name {
+  width: 400px;
+  font-size: 0.9em;
+}
+
+.contact {
+  display: flex;
+  gap: 8px;
+}
+
+#email,
+#phone {
+  width: 196px;
+  font-size: 0.9em;
+  margin-bottom: 32px;
+}
+
+input::placeholder {
+  font-size: 0.8em;
+}
+
+select,
+.descriptions {
+  width: 134px;
+}
+
+.files {
+  width: 160px;
+}
+
+#quantity {
+  width: 80px;
+}
+
+.specifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 8px;
+  height: 264px;
+  border-bottom: #3FBAFF solid 0.13em;
+}
+
+.specs {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  margin-right: auto;
+}
+
+.specifications p {
+  text-align: left;
+  margin: 8px 0 4px 0;
+  font-size: 0.8em;
+  transform: translateX(14px);
+}
+
+#insert-file {
+  background-color: #fff;
+  border: none;
+}
+
+#size,
+#color,
+#insert-file,
+#quantity,
+#descripton {
+  font-size: 0.8em;
+}
+
+.specifications span {
+  color: #757575;
+}
+
+#quantity {
+  width: 60px;
+}
+
+#description {
+  width: 160px;
+  height: 148px;
+  max-height: 148px;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.c-one {
+  margin-right: auto;
+}
+
+.quantities p {
+  text-align: center;
+  transform: translateX(0);
+}
+
+.descriptions p {
+  text-align: center;
+}
+
+.delivery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 8px;
+  height: 200px;
+  border-bottom: #3FBAFF solid 0.13em;
+}
+
+.delivery p {
+  text-align: left;
+  font-size: 0.8em;
+  margin: 8px 0 4px 0;
+}
+
+#address {
+  width: 400px;
+}
+
+#time,
+#date {
+  width: 198px;
+  font-size: 0.9em;
+}
+
+#submit {
+  width: 136px;
+  font-size: 0.8em;
+  background-color: #FFED00;
+  border: #D0D0D0 solid 1px;
+  border-radius: 25px;
+  margin: 24px 0 16px 280px;
