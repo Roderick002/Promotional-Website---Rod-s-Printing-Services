@@ -20,7 +20,7 @@
   background-color: #FDFDFD;
   padding: 16px 24px;
   width: 500px;
-  height: 600px;
+  height: 85vh;
   display: flex;
   flex-direction: column;
 }

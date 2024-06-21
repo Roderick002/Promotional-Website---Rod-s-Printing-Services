@@ -121,7 +121,6 @@
 }
 
 .carousel-container {
-    width: 64%;
     max-width: 800px;
     position: relative;
 }
@@ -129,11 +128,11 @@
 .carousel {
     position: relative;
     width: 100%;
-    overflow: hidden;
 }
 
 .carousel-image {
-    width: 100%;
+    width: 800px;
+    height: 550px;
     display: none;
     border-radius: 8px;
 }

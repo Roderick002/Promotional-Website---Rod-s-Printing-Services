@@ -4,6 +4,8 @@ const product = document.getElementById('product-name');
 const services = document.getElementById('services-name');
 const body = document.body;
 
+const form = document.getElementById('availform');
+
 const loc = window.location.href;
 
 if (loc.includes('product')) {
@@ -30,6 +32,9 @@ function showAvailForm() {
   body.style.top = `-${scrollPosition}px`; // Maintain scroll position visually
   body.style.overflowY = 'hidden'; // Hide vertical scrollbar'
   body.style.paddingRight = '1.2vw';
+
+  //gets the saved link
+  form.setAttribute('action', localStorage.getItem('link'))
 }
 
 

@@ -1,45 +1,52 @@
+
+
 document.getElementById('document-print').addEventListener('click', function() {
-  window.location.href = '/catalog_product_document_print';
+  nextPage('product_document_print')
 });
 document.getElementById('photo-print').addEventListener('click', function() {
-  window.location.href = '/catalog_product_photo_print';
+  nextPage('product_photo_print')
 });
 document.getElementById('photocopy').addEventListener('click', function() {
-  window.location.href = '/catalog_product_photocopy';
+  nextPage('product_photocopy')
 });
 document.getElementById('invitation').addEventListener('click', function() {
-  window.location.href = '/catalog_product_invitation';
+  nextPage('product_invitation')
 });
 document.getElementById('id-picture').addEventListener('click', function() {
-  window.location.href = '/catalog_product_id_picture';
+  nextPage('product_id_picture')
 });
 document.getElementById('lamination').addEventListener('click', function() {
-  window.location.href = '/catalog_product_lamination';
+  nextPage('product_lamination')
 });
 document.getElementById('framed-picture').addEventListener('click', function() {
-  window.location.href = '/catalog_product_framed_picture';
+  nextPage('product_framed_picture')
 });
 document.getElementById('printer').addEventListener('click', function() {
-  window.location.href = '/catalog_product_printer';
+  nextPage('product_printer')
 });
 document.getElementById('printer-repair').addEventListener('click', function() {
-  window.location.href = '/catalog_services_printer_repair';
+  nextPage('services_printer_repair')
 });
 document.getElementById('ciss-installation').addEventListener('click', function() {
-  window.location.href = '/catalog_services_ciss_installation';
+  nextPage('services_document_ciss_installation')
 });
 document.getElementById('defective-printer').addEventListener('click', function() {
-  window.location.href = '/catalog_services_defective_printer';
+  nextPage('services_defective_printer')
 });
 document.getElementById('online-appointment').addEventListener('click', function() {
-  window.location.href = '/catalog_services_online_appointment';
+  nextPage('services_online_appointment')
 });
 document.getElementById('resume-maker').addEventListener('click', function() {
-  window.location.href = '/catalog_services_resume_maker';
+  nextPage('services_resume_maker')
 });
 document.getElementById('photo-editing').addEventListener('click', function() {
-  window.location.href = '/catalog_services_photo_editing';
+  nextPage('services_photo_editing')
 });
+
+function nextPage(page){
+  localStorage.setItem('link', 'catalog_'+ page)
+  window.location.href = '/catalog_' + page;
+}
 
 // Store the scroll position in session storage when navigating away from the page
 window.addEventListener('beforeunload', function() {
