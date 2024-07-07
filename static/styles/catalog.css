@@ -15,12 +15,12 @@ h2 {
     margin: auto;
     height: auto;
     background-color: #F7F6F6;
-    max-width: 1800px;
+    width: auto;
 }
 
 #banner-title {
     position: absolute;
-    top: 220px;
+    top: 260px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -28,53 +28,40 @@ h2 {
     letter-spacing: -2px;
     font-size: 50px;
     font-style: italic;
-    -webkit-text-stroke: 2.5px black; 
+    -webkit-text-stroke: 2.5px black;
 }
+#catalog-description{
+    position: absolute;
+    top: 294px; /* Adjust this value as needed to position it below the title */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: inline-block;
+    font-size: 30px;
+    letter-spacing: -2px;
+    font-style: italic;
+    -webkit-text-stroke: 2px black; 
 
+}
 .header-bg {
     position: relative;
     height: 250px;
     background-color: #F7F6F6;
     margin: auto;
-    border-top: 2em solid #F7F6F6;
-    border-bottom: 2em solid #F7F6F6;
-    border-right: 1.5em solid #F7F6F6;
-    border-left: 1.5em solid #F7F6F6;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 100px auto;
-    margin-bottom: 120px;
+    margin-bottom: 320px;
 }
 
-.c0 {
-    background-color: #ECECEC;
-    width: 6.4%;
-}
 
-.c1 {
-    background-color: #F5DBE9;
-    width: 6.4%;
-}
-
-.c2 {
-    background-color: #D0DFE7;
-    width: 6.4%;
-}
-
-.c3 {
-    background-color: #F6F3E0;
-    width: 6.4%;
-}
-
-.c4 {
-    background-color: #F5DBE9;
-    width: 6.4%;
-}
-
-.c5 {
-    background-color: #D0DFE7;
-    width: 6.4%;
+.catalog-bg-image {
+    width: 100%;
+    /* Make the image fill the entire width of its container */
+    height: 520px;
+    /* Set the height to 320 pixels */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
 }
 
 .products {
@@ -95,7 +82,7 @@ h2 {
 }
 
 .grid-item {
-    background-color: #FCF5EB;
+    background-color: #F7F7F7;
     border: 1px solid #ccc;
     color: #000;
     padding: 4px;

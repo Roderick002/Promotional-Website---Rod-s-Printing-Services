@@ -1,5 +1,3 @@
-
-
 document.getElementById('document-print').addEventListener('click', function() {
   nextPage('product_document_print')
 });
@@ -28,7 +26,7 @@ document.getElementById('printer-repair').addEventListener('click', function() {
   nextPage('services_printer_repair')
 });
 document.getElementById('ciss-installation').addEventListener('click', function() {
-  nextPage('services_document_ciss_installation')
+  nextPage('services_ciss_installation')
 });
 document.getElementById('defective-printer').addEventListener('click', function() {
   nextPage('services_defective_printer')
@@ -43,21 +41,21 @@ document.getElementById('photo-editing').addEventListener('click', function() {
   nextPage('services_photo_editing')
 });
 
-function nextPage(page){
-  localStorage.setItem('link', 'catalog_'+ page)
+function nextPage(page) {
+  localStorage.setItem('link', 'catalog_' + page)
   window.location.href = '/catalog_' + page;
 }
 
 // Store the scroll position in session storage when navigating away from the page
 window.addEventListener('beforeunload', function() {
-    sessionStorage.setItem('scrollPosition', window.scrollY);
+  sessionStorage.setItem('scrollPosition', window.scrollY);
 });
 
 // Restore the scroll position when navigating back to the page
 window.addEventListener('DOMContentLoaded', function() {
-    var scrollPosition = sessionStorage.getItem('scrollPosition');
-    if (scrollPosition !== null) {
-        window.scrollTo(0, parseInt(scrollPosition));
-        sessionStorage.removeItem('scrollPosition');
-    }
+  var scrollPosition = sessionStorage.getItem('scrollPosition');
+  if (scrollPosition !== null) {
+    window.scrollTo(0, parseInt(scrollPosition));
+    sessionStorage.removeItem('scrollPosition');
+  }
 });

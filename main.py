@@ -1,13 +1,28 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, request
 import firebase_admin
-from firebase_admin import db, credentials
+from firebase_admin import db, credentials, storage
+from google.cloud.storage import bucket
+from flask_mail import Mail, Message
 
 cred = credentials.Certificate("credentials.json")
-firebase_admin.initialize_app(cred, {"databaseURL": "https://rod-s-printing-services-default-rtdb.firebaseio.com/"})
+firebase_admin.initialize_app(
+    cred, {
+        "databaseURL":
+        "https://rod-s-printing-services-default-rtdb.firebaseio.com/",
+        'storageBucket': 'gs://rod-s-printing-services.appspot.com'
+    })
 
+bucket = storage.bucket()
 ref = db.reference("/firebase")
 
 app = Flask(__name__)
+app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = 'rodsprintingservices@gmail.com'
+app.config['MAIL_PASSWORD'] = 'epan yviw ygcw evkp'
+app.config['MAIL_USE_TLS'] = True
+
+mail = Mail(app)
 
 
 @app.route('/')
@@ -28,9 +43,34 @@ def catalog_product():
         name = request.form['name']
         phone = request.form['phone']
         email = request.form['email']
+        size = request.form['size']
+        color = request.form['color']
+        quantity = request.form['quantity']
+        description = request.form['description']
+        address = request.form['address']
+        time = request.form['time']
+        date = request.form['date']
+
         username = email.replace('.', '')
-        db.reference('/product_clients').update({username : ''})
-        db.reference('/product_clients/'+username).update({'email' : email, 'name':name, 'phone':phone})
+
+        db.reference('/product_clients').update({username: ''})
+        db.reference('/product_clients/' + username).update({
+            'email': email,
+            'name': name,
+            'phone': phone,
+            'size': size,
+            'color': color,
+            'quantity': quantity,
+            'description': description,
+            'address': address,
+            'time': time,
+            'date': date
+        })
+        msg = Message("Test",
+                      sender='rodsprintingservices@gmail.com',
+                      recipients=[email])
+        msg.body = "Website Testing"
+        mail.send(msg)
     return render_template('catalog_product.html')
 
 
@@ -46,8 +86,12 @@ def catalog_services():
         phone = request.form['phone']
         email = request.form['email']
         username = email.replace('.', '')
-        db.reference('/services_clients').update({username : ''})
-        db.reference('/services_clients/'+username).update({'email' : email, 'name':name, 'phone':phone})
+        db.reference('/services_clients').update({username: ''})
+        db.reference('/services_clients/' + username).update({
+            'email': email,
+            'name': name,
+            'phone': phone
+        })
     return render_template('catalog_services.html')
 
 

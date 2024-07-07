@@ -39,29 +39,16 @@ h2 {
     height: 250px;
     background-color: #292929;
 }
-
-.vertical-stripes {
-    display: flex;
-    height: 100%;
-    padding-right: 40px;
-    padding-left: 40px;
-    gap: 60px;
+.catalog-bg-image {
+    width: 100%;
+    /* Make the image fill the entire width of its container */
+    height: 250px;
+    /* Set the height to 320 pixels */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
 }
 
-.stripe {
-    flex: 1;
-    color: white;
-}
 
-.stripe:nth-child(1) { background-color: #B2F6FF; }
-.stripe:nth-child(2) { background-color: #FFF9AC; }
-.stripe:nth-child(3) { background-color: #FF9DD3; color: black; }
-.stripe:nth-child(4) { background-color: #B2F6FF; }
-.stripe:nth-child(5) { background-color: #FFF9AC; }
-.stripe:nth-child(6) { background-color: #FF9DD3; color: black; }
-.stripe:nth-child(7) { background-color: #B2F6FF; }
-.stripe:nth-child(8) { background-color: #FFF9AC; }
-.stripe:nth-child(9) { background-color: #FF9DD3; }
 
 
 #team-name{
@@ -71,7 +58,7 @@ h2 {
 #team-description{
     position: absolute;
     font-size: 30px;
-    top: 542.5px;
+    top: 474.5px;
     left: 50%;
     transform: translate(-50%, -50%);
     

@@ -10,3 +10,5 @@ packaging==24.0
 Werkzeug==3.0.3
 Flask
 firebase-admin
+google-cloud-storage
+Flask-Mail
