@@ -3,6 +3,7 @@ import firebase_admin
 from firebase_admin import db, credentials, storage
 from google.cloud.storage import bucket
 from flask_mail import Mail, Message
+from datetime import datetime
 
 cred = credentials.Certificate("credentials.json")
 firebase_admin.initialize_app(
@@ -52,6 +53,9 @@ def catalog_product():
         date = request.form['date']
 
         username = email.replace('.', '')
+        currentDate = datetime.now()
+        dateFormat = currentDate.strftime("%Y-%m-%d")
+        dateTime = currentDate.strftime("%Y-%m-%d-%H-%M-%S")
 
         db.reference('/product_clients').update({username: ''})
         db.reference('/product_clients/' + username).update({
@@ -66,10 +70,38 @@ def catalog_product():
             'time': time,
             'date': date
         })
-        msg = Message("Test",
-                      sender='rodsprintingservices@gmail.com',
+        db.reference('/new_orders/' + dateTime).update({
+            'email': email,
+            'name': name,
+            'phone': phone,
+            'size': size,
+            'color': color,
+            'quantity': quantity,
+            'description': description,
+            'address': address,
+            'time': time,
+            'date': date
+        })
+        db.reference('/order_history/'+ dateFormat +'/' + dateTime).update({
+            'email': email,
+            'name': name,
+            'phone': phone,
+            'size': size,
+            'color': color,
+            'quantity': quantity,
+            'description': description,
+            'address': address,
+            'time': time,
+            'date': date
+        })
+
+        
+        msg = Message("Order Confirmation - Rod's Printing Services",
+                      sender='no-reply@rodsprintingservices',
                       recipients=[email])
-        msg.body = "Website Testing"
+
+        msg.html = "<br> Dear <b> " + name +"</b>, <br> <br> Thank you for choosing Rod's Printing             Services for your printing needs! <br><br>We are pleased to inform you that we have                    successfully received your order. Below are the details of <br> your order for your                    reference: <br> <br> ORDER INFORMATION: <br> <b>Product/Service:</b> <br> <b>Date of Order:            </b>" + dateFormat + "<br> <b>Address: </b>" + address +" <br> <b>Scheduled Time: </b>" + time         +" <br><b>Scheduled Date: </b>" + date + " <br> <br> SPECIFICATIONS: <br> <b>Size: </b>" +             size + "<br> <b>Color: </b>" + color + "<br> <b>Quantity: </b>" + quantity + "<br> <br>Our             team is currently processing your order and will ensure that it is completed with the highest          <br> quality and delivered to you in a timely manner. We will keep you updated on the status           of your <br> order and will contact you ASAP to discuss the details <br> <br> If you have any          questions or need further assistance, please do not hesitate to contact us <br> <br> Thank you         for choosing Rod's Printing! <br> <br> Best regards, <br><br> <i>Mr. Roderick Palmes</i> <br>          <i>Business Owner</i> <br> <i>Rod's Printing Services</i> <br>                                         <i>www.rodsprintingservices.com</i>"
+
         mail.send(msg)
     return render_template('catalog_product.html')
 

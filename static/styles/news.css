@@ -24,17 +24,17 @@ h2 {
     top: 320px;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #F2F2F2;
     display: inline-block;
     letter-spacing: -2px;
-    font-size: 50px;
+    font-size: 80px;
     font-style: italic;
-    -webkit-text-stroke: 2.5px black; 
+    -webkit-text-stroke: 3px black; 
 }
 
-#news-description {
+/*#news-description {
     position: absolute;
-    top: 360px; /* Adjust this value as needed to position it below the title */
+    top: 360px; 
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -44,7 +44,7 @@ h2 {
     font-style: italic;
     -webkit-text-stroke: 2px black; 
 }
-
+*/
 .news-spacing {
     height: 500px;
 }

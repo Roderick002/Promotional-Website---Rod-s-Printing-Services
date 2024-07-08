@@ -11,11 +11,7 @@ h2 {
     margin: 5px 0;
 }
 
-/* Landing page styles */
-.landing-page {
-    text-align: center;
-    padding: 50px;
-}
+
 
 .branding {
     margin-bottom: 20px;
@@ -209,4 +205,156 @@ h2 {
 
 .about h2 {
     margin-bottom: 20px;
+}
+
+/* Landing page styles */
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+}
+
+#homepage {
+  width: full;
+  margin-top: 50px; 
+  padding: 0;
+}
+.banner-welcome{
+    width: 100%;
+    height: 300px;
+    position: relative; /* Positioning context for absolute positioning */
+    box-sizing: border-box; /* Include padding and border in the total width */
+    text-align: center;
+}
+.banner-welcome-bg {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #292929;
+    position: relative;
+    height: 250px;
+    border-radius: 50px; /* Adjust the radius value as per your design */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.centered-line {
+    position: absolute; /* Position absolutely relative to #home */
+    top: 37%; /* Center vertically */
+    left: 0; /* Align with the left edge of #home */
+    right: 0; /* Align with the right edge of #home */
+    height: 30px; /* Set the height of the line */
+    background-color: #4F4F4F; /* Line color */
+}
+
+#welcome-heading {
+    font-size: 60px; /* Adjust font size as needed */
+    padding-top: 40px;
+    color: white;
+    letter-spacing: -2px;
+    font-style: italic;
+    -webkit-text-stroke: 2px #11ADFF; 
+}
+#welcome-text{
+    text-align: center;
+    font-size: 16px; /* Adjust font size as needed */
+    padding-top: 20px;
+    color: white;
+    
+}
+
+
+#mission {
+    display: flex;
+    margin-top: 30px;
+}
+
+.mission-side {
+    padding: 50px; /* Optional padding for spacing */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.mission-logo-side{
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#h1-text{
+    font-size: 24px;
+    margin-bottom: 20px; 
+    font-style: bold;
+}
+#h2-text{
+    font-size: 100px; 
+    margin-bottom: 20px;
+    color: #E6007E;
+    letter-spacing: -2px;
+    font-style: italic;
+    -webkit-text-stroke: 1px #d3d3d3; 
+}
+
+#p-text{
+    max-width: 60%; 
+    font-size: 16px; /* Example font size for the mission description */
+    line-height: 1.6; /* Example line height for readability */
+    text-align: justify;
+    
+}
+.arrow-img{
+    width: 100%; /* Make the image fill the entire width of its container */
+    height: 250px; /* Set the height to 320 pixels */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+.why-choose-column-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.why-choose-column {
+    width: 400px;
+    height: 350px; /* Adjust height as needed */
+    margin: 10px;
+    flex: 1;
+    overflow: hidden; /* Ensure content inside doesn't overflow */
+}
+
+.featured-review-box {
+    padding: 20px;
+
+}
+
+.featured-reviewer-image {
+    text-align: center;
+    margin-bottom: -35px;
+    z-index: 2;
+}
+
+.featured-reviewer-image img {
+    width: 65px; /* Adjust width as needed */
+    height: 65px; /* Adjust height as needed */
+    border-radius: 50%; /* Make it a circle */
+}
+.review-info {
+    margin-top: 10px;
+    height: 280px;
+    border-radius: 30px;
+    padding: 20px; /* Add padding to create space around the content */
+    border: 1px solid black; /* Black border */
+    text-align: center;
+    font-style: italic;
+    
+}
+
+.reviewer-name {
+    margin-top: 15px; /* Adjust margin as needed */
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the name bold */
+    color: #333; /* Adjust color as needed */
+    z-index: 2;
 }

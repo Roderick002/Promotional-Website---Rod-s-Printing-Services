@@ -20,19 +20,19 @@ h2 {
 
 #banner-title {
     position: absolute;
-    top: 260px;
+    top: 250px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     display: inline-block;
     letter-spacing: -2px;
-    font-size: 50px;
+    font-size: 100px;
     font-style: italic;
-    -webkit-text-stroke: 2.5px black;
+    -webkit-text-stroke: 4px black;
 }
-#catalog-description{
+/*#catalog-description{
     position: absolute;
-    top: 294px; /* Adjust this value as needed to position it below the title */
+    top: 294px; 
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -43,6 +43,7 @@ h2 {
     -webkit-text-stroke: 2px black; 
 
 }
+*/
 .header-bg {
     position: relative;
     height: 250px;

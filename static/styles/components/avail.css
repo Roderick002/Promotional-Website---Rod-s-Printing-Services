@@ -204,6 +204,7 @@ select,
 
 #address {
   width: 400px;
+  font-size: 0.9em;
 }
 
 #time,
