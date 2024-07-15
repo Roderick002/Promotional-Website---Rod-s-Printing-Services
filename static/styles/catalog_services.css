@@ -72,7 +72,7 @@
 
 .border-line {
   height: 24px;
-  background-color: #704F4F;
+  background-color: #2c2c2c;
 }
 
 .services-description {
@@ -137,7 +137,8 @@
   width: 800px;
   height: 600px;
   display: none;
-  border-radius: 8px;
+  border-radius: 16px;
+  border: #292929 8px solid;
 }
 
 .carousel-image.active {

@@ -17,6 +17,7 @@
 
 <body>
   {% include 'components/avail.html' %}
+  {% include 'components/order-confirmed.html' %}
   {% include 'components/topBar.html' %}
   <section class="banner">
     <div class="header">
@@ -39,7 +40,7 @@
           <button id='avail-now' onclick="showAvailForm()">Avail Now</button>
         </div>
         <div class="banner-image">
-          <img src="static/images/catalog_product/cP-banner-image.svg" alt="Printer" />
+          <img src="static/images/catalog_product/cP-banner-image.svg" alt="Printer" id="banner-img"/>
         </div>
       </div>
     </div>

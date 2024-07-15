@@ -21,6 +21,7 @@
   padding: 16px 24px;
   width: 500px;
   height: 85vh;
+  max-height: 720px;
   display: flex;
   flex-direction: column;
 }
@@ -35,13 +36,15 @@
   font-size: 0.9em;
 }
 
-#close {
+#close,
+#oc-close {
   margin-left: auto;
   width: 14px;
   margin-right: 4px;
 }
 
-#close:hover {
+#close:hover,
+#oc-close:hover {
   cursor: pointer;
   filter: brightness(0.5);
 }
@@ -220,3 +223,55 @@ select,
   border: #D0D0D0 solid 1px;
   border-radius: 25px;
   margin: 24px 0 16px 280px;
+}
+
+#submit:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+
+#oc-visibility {
+  backdrop-filter: blur(4px);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  font-family: sans-serif;
+}
+
+#oc-header {
+  background-color: #42D050;
+}
+
+#oc-container {
+  overflow-y: hidden;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#oc-container p {
+  width: 332px;
+  text-align: center;
+  margin: 12px 0;
+
+}
+
+#ok {
+  width: 120px;
+  height: 36px;
+  border: #D0D0D0 solid 1px;
+  border-radius: 10px;
+  background-color: #42D050;
+}
+
+#ok:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
+}

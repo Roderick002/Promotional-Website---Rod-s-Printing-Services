@@ -8,6 +8,7 @@ const img2 = document.getElementById('img2');
 const img3 = document.getElementById('img3');
 const img4 = document.getElementById('img4');
 
+
 const title = document.getElementById('product-name');
 const description = document.getElementById('product-description');
 const specs = document.getElementById('specs-price');
@@ -17,6 +18,8 @@ if (link.includes("document_print")) {
     title.textContent = "Document Print";
     description.textContent = "Our document printing service provides high-quality prints for all your needs, from reports and presentations to flyers and brochures. Whether you need a single copy or bulk printing, our fast and reliable service guarantees professional results every time.";
     specs.textContent = 'Our document printing service ensures top-notch prints, catering to a variety of standard paper sizes, namely letter (8.5" x 11"), A4 (210 mm x 297 mm), and Legal (8.5" x 14"). These sizes accommodate diverse document requirements, whether it is for professional reports, academic papers, or personal projects. Pricing varies depending on size and color specifications. For letter and A4 sizes, grayscale prints range from ₱2.00 to ₱3.00 pesos per page, while colored variants are priced between ₱5.00 to ₱12.00 pesos per page. For Legal size prints, grayscale options are available at ₱3.00 to ₱5.00 pesos per page, while colored prints range from ₱7.00 to ₱15.00 pesos per page. ';
+
+
 } else if (link.includes("photo_print")) {
     title.textContent = "Photo Print";
     description.textContent = " Capture your cherished memories with our premium photo printing service. We use high-quality photo paper to produce vibrant, true-to-life prints that preserve your photos' original beauty and detail. Available in a range of sizes and finishes, from glossy to matte, our photo prints are perfect for framing, albums, or gifting.";
@@ -53,15 +56,17 @@ function imageSrc(product, productNo) {
     return ('static/images/catalog_product/' + product + '/product_' + productNo + '.jpg');
 }
 
-function setProductSnapshots(product){
+function setProductSnapshots(product) {
     image1.src = imageSrc(product, "1");
     image2.src = imageSrc(product, "2");
     image3.src = imageSrc(product, "3");
     image4.src = imageSrc(product, "4");
     image5.src = imageSrc(product, "5");
-    img1.src = image1.src
-    img2.src = image2.src
-    img3.src = image3.src
-    img4.src = image4.src
-    img5.src = image5.src
+    img1.src = image1.src;
+    img2.src = image2.src;
+    img3.src = image3.src;
+    img4.src = image4.src;
+    img5.src = image5.src;
+
+    alert(image1.src)
 }

@@ -30,7 +30,6 @@ mail = Mail(app)
 def index():
     return render_template('index.html')
 
-
 @app.route('/catalog_product_document_print', methods=['GET', 'POST'])
 @app.route('/catalog_product_photo_print', methods=['GET', 'POST'])
 @app.route('/catalog_product_photocopy', methods=['GET', 'POST'])
@@ -41,6 +40,7 @@ def index():
 @app.route('/catalog_product_printer', methods=['GET', 'POST'])
 def catalog_product():
     if request.method == 'POST':
+        item = request.form['item-name']
         name = request.form['name']
         phone = request.form['phone']
         email = request.form['email']
@@ -59,6 +59,7 @@ def catalog_product():
 
         db.reference('/product_clients').update({username: ''})
         db.reference('/product_clients/' + username).update({
+            'item': item,
             'email': email,
             'name': name,
             'phone': phone,
@@ -71,6 +72,7 @@ def catalog_product():
             'date': date
         })
         db.reference('/new_orders/' + dateTime).update({
+            'item': item,
             'email': email,
             'name': name,
             'phone': phone,
@@ -83,6 +85,7 @@ def catalog_product():
             'date': date
         })
         db.reference('/order_history/'+ dateFormat +'/' + dateTime).update({
+            'item': item,
             'email': email,
             'name': name,
             'phone': phone,
@@ -96,11 +99,11 @@ def catalog_product():
         })
 
         
-        msg = Message("Order Confirmation - Rod's Printing Services",
+        msg = Message("Order Confirmation - Rod's Printing",
                       sender='no-reply@rodsprintingservices',
                       recipients=[email])
 
-        msg.html = "<br> Dear <b> " + name +"</b>, <br> <br> Thank you for choosing Rod's Printing             Services for your printing needs! <br><br>We are pleased to inform you that we have                    successfully received your order. Below are the details of <br> your order for your                    reference: <br> <br> ORDER INFORMATION: <br> <b>Product/Service:</b> <br> <b>Date of Order:            </b>" + dateFormat + "<br> <b>Address: </b>" + address +" <br> <b>Scheduled Time: </b>" + time         +" <br><b>Scheduled Date: </b>" + date + " <br> <br> SPECIFICATIONS: <br> <b>Size: </b>" +             size + "<br> <b>Color: </b>" + color + "<br> <b>Quantity: </b>" + quantity + "<br> <br>Our             team is currently processing your order and will ensure that it is completed with the highest          <br> quality and delivered to you in a timely manner. We will keep you updated on the status           of your <br> order and will contact you ASAP to discuss the details <br> <br> If you have any          questions or need further assistance, please do not hesitate to contact us <br> <br> Thank you         for choosing Rod's Printing! <br> <br> Best regards, <br><br> <i>Mr. Roderick Palmes</i> <br>          <i>Business Owner</i> <br> <i>Rod's Printing Services</i> <br>                                         <i>www.rodsprintingservices.com</i>"
+        msg.html = "<br> Greetings <b> " + name +"</b>, <br> <br> Thank you for choosing Rod's Printing for your printing needs! <br><br>We are pleased to inform you that we have successfully received your order. Below are the details of <br> your order for your reference: <br> <br> ORDER INFORMATION: <br> <b>Product/Service:</b> " + item + "<br> <b>Date   of Order: </b>" + dateFormat + "<br> <b>Address: </b>" + address +" <br> <b>Scheduled Time:</b>" + time +" <br><b>Scheduled Date: </b>" + date + " <br> <br> SPECIFICATIONS: <br> <b>Size: </b>" + size + "<br> <b>Color: </b>" + color + "<br> <b>Quantity: </b>" + quantity + " <br> <br>Our team is currently processing your order and will ensure that it is completed with the highest <br> quality and delivered to you in a timely manner. We will keep you updated on the status of your <br> order and will contact you ASAP to discuss the details <br> <br> If you have any   questions or need further assistance, please do not hesitate to contact us <br> <br> Thank you for choosing Rod's Printing! <br> <br> Best regards, <br><br> <i>Mr. Roderick Palmes</i> <br> <i>Business Owner</i> <br> <i>Rod's Printing Services</i> <br> <i>www.rodsprintingservices.com</i>"
 
         mail.send(msg)
     return render_template('catalog_product.html')
