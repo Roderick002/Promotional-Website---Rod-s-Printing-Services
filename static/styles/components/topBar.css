@@ -1,10 +1,3 @@
-@font-face {
-  font-family: Montserrat;
-  src: url("static/fonts/Montserrat.ttf");
-}
-
-
-
 .top-nav {
   background-color: #000000;
   transition: top 0.3s ease;
@@ -80,8 +73,9 @@ ul {
   justify-content: space-around;
   align-items: center;
   font-size: 15px;
-  font-family: Montserrat;
-  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .bossRodLogo {

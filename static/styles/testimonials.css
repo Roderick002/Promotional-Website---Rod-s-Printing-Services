@@ -1,10 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    
+}
+
+.titleTestimonials {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.descTestimonials {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.descName {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.reviewsName {
+    font-family: "Open Sans", sans-serif;
+    ;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.reviewsDesc {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h2 {
@@ -13,12 +47,16 @@ h2 {
 
 .black-bg-testimonials {
     height: 320px;
-    
+
 }
+
 .testimonial-bg-image {
-  width: 100%; /* Make the image fill the entire width of its container */
-  height: 250px; /* Set the height to 320 pixels */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    width: 100%;
+    /* Make the image fill the entire width of its container */
+    height: 250px;
+    /* Set the height to 320 pixels */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
 }
 
 #testimonials-title {
@@ -30,8 +68,10 @@ h2 {
     display: inline-block;
     letter-spacing: -2px;
     font-size: 80px;
+    font-family: "Arimo", sans-serif;
+    font-weight: 700;
     font-style: italic;
-    -webkit-text-stroke: 3px black; 
+    -webkit-text-stroke: 3px black;
     background-color: transparent;
 }
 
@@ -57,7 +97,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .why-choose-column-container {
@@ -68,13 +108,15 @@ h2 {
 
 .why-choose-column {
     width: 400px;
-    height: 350px; /* Adjust height as needed */
+    height: 350px;
+    /* Adjust height as needed */
     background-color: #fff9ac;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
     flex: 1;
-    overflow: hidden; /* Ensure content inside doesn't overflow */
+    overflow: hidden;
+    /* Ensure content inside doesn't overflow */
 }
 
 .featured-review-box {
@@ -88,56 +130,74 @@ h2 {
 }
 
 .featured-reviewer-image img {
-    width: 50px; /* Adjust width as needed */
-    height: 50px; /* Adjust height as needed */
-    border-radius: 50%; /* Make it a circle */
+    width: 50px;
+    /* Adjust width as needed */
+    height: 50px;
+    /* Adjust height as needed */
+    border-radius: 50%;
+    /* Make it a circle */
 }
+
 .review-info {
     margin-top: 10px;
     background-color: white;
     height: 280px;
-    padding: 20px; /* Add padding to create space around the content */
+    padding: 20px;
+    /* Add padding to create space around the content */
 }
 
 .reviewer-name {
-    margin-top: 15px; /* Adjust margin as needed */
-    font-size: 16px; /* Adjust font size as needed */
-    font-weight: bold; /* Make the name bold */
-    color: #333; /* Adjust color as needed */
+    margin-top: 15px;
+    /* Adjust margin as needed */
+    font-size: 16px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Make the name bold */
+    color: #333;
+    /* Adjust color as needed */
     z-index: 2;
 }
 
 .why-choose-name {
-    color: #333; /* Adjust the color as needed */
-    font-size: 24px; /* Adjust the font size as needed */
+    color: #333;
+    /* Adjust the color as needed */
+    font-size: 24px;
+    /* Adjust the font size as needed */
 }
 
 .why-choose-description {
-    color: #666; /* Adjust the color as needed */
-    font-size: 18px; /* Adjust the font size as needed */
+    color: black;
+    /* Adjust the color as needed */
+    font-size: 18px;
+    /* Adjust the font size as needed */
     max-width: 60%;
 }
 
 /* CSS for the "Mission" section */
 .reviews-layout {
-    text-align: center; /* Center align the content */
-    margin-top: 50px; /* Adjust as needed */
+    text-align: center;
+    /* Center align the content */
+    margin-top: 50px;
+    /* Adjust as needed */
 }
 
 #reviews-name {
-    color: #333; /* Adjust the color as needed */
-    font-size: 24px; /* Adjust the font size as needed */
+    color: #333;
+    /* Adjust the color as needed */
+    font-size: 24px;
+    /* Adjust the font size as needed */
 }
 
-#customer-section{
+#customer-section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width:100%;
+    width: 100%;
     padding-bottom: 50px;
 }
-.customer-section-heading{
+
+.customer-section-heading {
     letter-spacing: 1px;
     margin: 30px 0px;
     padding: 10px 20px;
@@ -146,98 +206,116 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.customer-section-heading h1{
+
+.customer-section-heading h1 {
     font-size: 40px;
     font-weight: bold;
     color: black;
 }
-.customer-section-box-container{
+
+.customer-section-box-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width:100%;
+    width: 100%;
 }
-.customer-section-box{
-    width:500px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+
+.customer-section-box {
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     padding: 20px;
     margin: 15px;
     cursor: pointer;
 }
-.profile-img{
-    width:50px;
+
+.profile-img {
+    width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
 }
-.profile-img img{
+
+.profile-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-.profile{
+
+.profile {
     display: flex;
     align-items: center;
 }
-.name-user{
+
+.name-user {
     display: flex;
     flex-direction: column;
 }
-.name-user strong{
+
+.name-user strong {
     color: #3d3d3d;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
 }
-.name-user span{
+
+.name-user span {
     color: #979797;
     font-size: 0.8rem;
 }
-.reviews{
+
+.reviews {
     color: #f9d71c;
 }
-.customer-section-box-top{
+
+.customer-section-box-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-.client-comment p{
+
+.client-comment p {
     font-size: 0.9rem;
     color: #4b4b4b;
 }
-.customer-section-box:hover{
+
+.customer-section-box:hover {
     transform: translateY(-10px);
     transition: all ease 0.3s;
 }
 
-@media(max-width:1060px){
-    .customer-section-box{
-        width:45%;
+@media(max-width:1060px) {
+    .customer-section-box {
+        width: 45%;
         padding: 10px;
     }
 }
-@media(max-width:790px){
-    .customer-section-box{
-        width:100%;
+
+@media(max-width:790px) {
+    .customer-section-box {
+        width: 100%;
     }
-    .customer-section-heading h1{
+
+    .customer-section-heading h1 {
         font-size: 1.4rem;
     }
 }
-@media(max-width:340px){
-    .customer-section-top{
+
+@media(max-width:340px) {
+    .customer-section-top {
         flex-wrap: wrap;
         margin-bottom: 10px;
     }
-    .reviews{
+
+    .reviews {
         margin-top: 10px;
     }
 }
-::selection{
+
+::selection {
     color: #ffffff;
     background-color: #252525;
 }

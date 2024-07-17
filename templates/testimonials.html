@@ -1,165 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/testimonials.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/topBar.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/footer.css') }}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <title>Testimonials</title>
-  </head>
-  <body> 
-    {% include 'components/topBar.html' %} 
-    <main>
-      <section class="black-bg-testimonials">
-        <img src="static/images/testimonials/testimonials-banner.jpg" class="testimonial-bg-image">
-        <h1 id="testimonials-title">Testimonials</h1>
-      </section>
-      <section class="why-choose-layout">
-        <h3 id="why-choose-name">Why Choose Us?</h3>
-        <span id="why-choose-description" class="why-choose-description">At Rod's Printing Services, we pride ourselves on delivering high-quality printing solutions tailored to your needs. Our state-of-the-art technology, combined with a dedicated team of professionals, ensures that your projects are executed with precision and care.</span>
-        <div class="why-choose-column-container">
-          <div class="why-choose-column" style="background-color: #FFF9AC;">
-            <div class="featured-review-box">
-              <div class="featured-reviewer-image">
-                <img src="static/images/testimonials/avatar_male.png" alt="Customer Image">
-              </div>
-              <div class="featured-review-content">
-                <div class="review-info">
-                  <p class="reviewer-name">John Albert Cabanilla</p>
-                  <p class="review-text">"Rod's Printing Services provided an exceptional Canon Pixma MP287 3 in 1 Printer. The quality output was outstanding, and the turnaround time was impressive. We highly recommend them for all your printing needs."</p>
-                </div>
-              </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/testimonials.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/topBar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/footer.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <title>Testimonials</title>
+</head>
+
+<body>
+  {% include 'components/topBar.html' %}
+  <main>
+    <section class="black-bg-testimonials">
+      <img src="static/images/testimonials/testimonials-banner.jpg" class="testimonial-bg-image">
+      <h1 id="testimonials-title">Testimonials</h1>
+    </section>
+    <section class="why-choose-layout">
+      <h3 class="titleTestimonials" id="why-choose-name">Why Choose Us?</h3>
+      <span id="why-choose-description" class="why-choose-description titleTestimonials">At Rod's Printing Services, we
+        pride ourselves on
+        delivering high-quality printing solutions tailored to your needs. Our state-of-the-art technology, combined
+        with a dedicated team of professionals, ensures that your projects are executed with precision and care.</span>
+      <div class="why-choose-column-container">
+        <div class="why-choose-column" style="background-color: #FFF9AC;">
+          <div class="featured-review-box">
+            <div class="featured-reviewer-image">
+              <img src="static/images/testimonials/avatar_male.png" alt="Customer Image">
             </div>
-          </div>
-          <div class="why-choose-column" style="background-color: #ABE6FF;">
-            <div class="featured-review-box">
-              <div class="featured-reviewer-image">
-                <img src="static/images/testimonials/avatar_female.png" alt="Customer Image">
-              </div>
-              <div class="featured-review-content">
-                <div class="review-info">
-                  <p class="reviewer-name">Christine Mae Oyangoren</p>
-                  <p class="review-text">"Rod's Printing Services transformed my Canon printer with their CISS setup. The print quality is superb, and I've saved a lot on ink costs. Highly recommended for anyone looking to enhance their printing experience."</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="why-choose-column" style="background-color: #FF9DD3;">
-            <div class="featured-review-box">
-              <div class="featured-reviewer-image">
-                <img src="static/images/testimonials/avatar_female.png" alt="Customer Image">
-              </div>
-              <div class="featured-review-content">
-                <div class="review-info">
-                  <p class="reviewer-name">Kathlene Panuga</p>
-                  <p class="review-text">"I was under a tight deadline, and Rod's Printing Services delivered my printed thesis on time with exceptional quality. Their attention to detail and commitment to customer satisfaction are truly impressive."</p>
-                </div>
+            <div class="featured-review-content">
+              <div class="review-info">
+                <p class="reviewer-name name">John Albert Cabanilla</p>
+                <p class="review-text descName">"Rod's Printing Services provided an exceptional Canon Pixma MP287 3 in
+                  1
+                  Printer. The quality output was outstanding, and the turnaround time was impressive. We highly
+                  recommend them for all your printing needs."</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section id="customer-section">
-        <div class="customer-section-heading">
-          <h1>Reviews:</h1>
-        </div>
-        <div class="customer-section-box-container">
-          <div class="customer-section-box">
-            <div class="customer-section-box-top">
-              <div class="profile">
-                <div class="profile-img">
-                  <img src="static/images/testimonials/avatar_male.png" />
-                </div>
-                <div class="name-user">
-                  <strong>Sir. Ric Mangahas</strong>
-                </div>
-              </div>
-              <div class="reviews">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
+        <div class="why-choose-column" style="background-color: #ABE6FF;">
+          <div class="featured-review-box">
+            <div class="featured-reviewer-image">
+              <img src="static/images/testimonials/avatar_female.png" alt="Customer Image">
             </div>
-            <div class="client-comment">
-              <p>"I've worked with many printing companies, but Rod's Printing Services stands out for their attention to detail and excellent customer service. Our wedding invitations came out beautifully, and we received so many compliments."</p>
-            </div>
-          </div>
-          <div class="customer-section-box">
-            <div class="customer-section-box-top">
-              <div class="profile">
-                <div class="profile-img">
-                  <img src="static/images/testimonials/avatar_female.png" />
-                </div>
-                <div class="name-user">
-                  <strong>Ma'am. Ivy Gail</strong>
-                </div>
+            <div class="featured-review-content">
+              <div class="review-info">
+                <p class="reviewer-name name">Christine Mae Oyangoren</p>
+                <p class="review-text descName">"Rod's Printing Services transformed my Canon printer with their CISS
+                  setup. The
+                  print quality is superb, and I've saved a lot on ink costs. Highly recommended for anyone looking to
+                  enhance their printing experience."</p>
               </div>
-              <div class="reviews">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-            <div class="client-comment">
-              <p>"From start to finish, my experience with Rod's Printing Services was excellent. They handled my book launch materials with the utmost care and precision. Highly recommend!"</p>
-            </div>
-          </div>
-          <div class="customer-section-box">
-            <div class="customer-section-box-top">
-              <div class="profile">
-                <div class="profile-img">
-                  <img src="static/images/testimonials/avatar_male.png" />
-                </div>
-                <div class="name-user">
-                  <strong>Ej Zuniga</strong>
-                </div>
-              </div>
-              <div class="reviews">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-            <div class="client-comment">
-              <p>"Rod's Printing Services brought our promotional posters to life. The print quality was vibrant, and they met our tight deadline without compromising on quality."</p>
-            </div>
-          </div>
-          <div class="customer-section-box">
-            <div class="customer-section-box-top">
-              <div class="profile">
-                <div class="profile-img">
-                  <img src="static/images/testimonials/avatar_male.png" />
-                </div>
-                <div class="name-user">
-                  <strong>Harold Uy</strong>
-                </div>
-              </div>
-              <div class="reviews">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-            <div class="client-comment">
-              <p>"Rod's Printing Services printed our family reunion booklets, and everyone was thrilled with the quality. The images were clear, and the colors were true to life. Their team was a pleasure to work with from start to finish."</p>
             </div>
           </div>
         </div>
+        <div class="why-choose-column" style="background-color: #FF9DD3;">
+          <div class="featured-review-box">
+            <div class="featured-reviewer-image">
+              <img src="static/images/testimonials/avatar_female.png" alt="Customer Image">
+            </div>
+            <div class="featured-review-content">
+              <div class="review-info">
+                <p class="reviewer-name name">Kathlene Panuga</p>
+                <p class="review-text descName">"I was under a tight deadline, and Rod's Printing Services delivered my
+                  printed
+                  thesis on time with exceptional quality. Their attention to detail and commitment to customer
+                  satisfaction are truly impressive."</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </section> {% include 'components/footer.html' %}
-    </main>
-    <script src="static/script/topBar.js"></script>
-  </body>
+      </div>
+    </section>
+    <section id="customer-section">
+      <div class="customer-section-heading">
+        <h1 class="titleTestimonials">Reviews:</h1>
+      </div>
+      <div class="customer-section-box-container">
+        <div class="customer-section-box">
+          <div class="customer-section-box-top">
+            <div class="profile">
+              <div class="profile-img">
+                <img src="static/images/testimonials/avatar_male.png" />
+              </div>
+              <div class="name-user">
+                <strong class="reviewsName">Sir. Ric Mangahas</strong>
+              </div>
+            </div>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="client-comment">
+            <p class="reviewsDesc">"I've worked with many printing companies, but Rod's Printing Services stands out for
+              their attention to
+              detail and excellent customer service. Our wedding invitations came out beautifully, and we received so
+              many compliments."</p>
+          </div>
+        </div>
+        <div class="customer-section-box">
+          <div class="customer-section-box-top">
+            <div class="profile">
+              <div class="profile-img">
+                <img src="static/images/testimonials/avatar_female.png" />
+              </div>
+              <div class="name-user">
+                <strong class="reviewsName">Ma'am. Ivy Gail</strong>
+              </div>
+            </div>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="client-comment">
+            <p class="reviewsDesc">"From start to finish, my experience with Rod's Printing Services was excellent. They
+              handled my book
+              launch materials with the utmost care and precision. Highly recommend!"</p>
+          </div>
+        </div>
+        <div class="customer-section-box">
+          <div class="customer-section-box-top">
+            <div class="profile">
+              <div class="profile-img">
+                <img src="static/images/testimonials/avatar_male.png" />
+              </div>
+              <div class="name-user">
+                <strong class="reviewsName">Ej Zuniga</strong>
+              </div>
+            </div>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="client-comment">
+            <p class="reviewsDesc">"Rod's Printing Services brought our promotional posters to life. The print quality
+              was vibrant, and they
+              met our tight deadline without compromising on quality."</p>
+          </div>
+        </div>
+        <div class="customer-section-box">
+          <div class="customer-section-box-top">
+            <div class="profile">
+              <div class="profile-img">
+                <img src="static/images/testimonials/avatar_male.png" />
+              </div>
+              <div class="name-user">
+                <strong class="reviewsName">Harold Uy</strong>
+              </div>
+            </div>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="client-comment">
+            <p class="reviewsDesc">"Rod's Printing Services printed our family reunion booklets, and everyone was
+              thrilled with the quality.
+              The images were clear, and the colors were true to life. Their team was a pleasure to work with from start
+              to finish."</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section> {% include 'components/footer.html' %}
+  </main>
+  <script src="static/script/topBar.js"></script>
+</body>
+
 </html>

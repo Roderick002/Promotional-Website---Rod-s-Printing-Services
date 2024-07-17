@@ -1,8 +1,20 @@
 /* General styles */
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.titleCatalog {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.descCatalog {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -27,9 +39,12 @@ h2 {
     display: inline-block;
     letter-spacing: -2px;
     font-size: 100px;
+    font-family: "Arimo", sans-serif;
+    font-weight: 700;
     font-style: italic;
     -webkit-text-stroke: 4px black;
 }
+
 /*#catalog-description{
     position: absolute;
     top: 294px; 
@@ -119,5 +134,5 @@ h2 {
     margin: 0 auto;
     font-weight: 400;
     text-indent: 1in;
-    font-style: italic;
+    font-style: normal;
 }
