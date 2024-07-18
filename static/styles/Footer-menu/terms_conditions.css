@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.termsconditions-container {
+  padding-left: 25%;
+  padding-right: 25%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  
+}
+
+h2 {
+  margin-top: 1.5em;
+}
+h3 {
+    margin-bottom: 1.5em;
+}
+p {
+  margin-bottom: 1.5em;
+}
+
+ul {
+  margin-bottom: 1.5em;
+}

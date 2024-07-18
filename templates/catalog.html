@@ -6,11 +6,130 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/catalog.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/topBar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/footer.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
   <title>Catalog</title>
 </head>
 
 <body>
-  <h1>Catalog!</h1>
+
+  {% include 'components/topBar.html' %}
+
+  <section>
+    <div class="header">
+      <div class="header-bg">
+        <img src="static/images/catalog/catalog_banner.png" class="catalog-bg-image">
+        <h1 id="banner-title">CATALOG</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="redirect-products">
+    <div>
+      <h1 class="titleCatalog">PRODUCTS</h1>
+      <h5 class="titleCatalog" id='products-intro'>Rod's Printing offers you quality-assured products crafted to elevate
+        your printing
+        experience to new heights. With our commitment to excellence and attention to detail, each product in our lineup
+        is meticulously designed to deliver exceptional performance and reliability.</h5>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item" id="document-print">
+        <img class="image" src="static/images/catalog/document_print.png" />
+        <h5 class="titleCatalog">Document Print</h5>
+        <p class="descCatalog">Price Range: ₱2.00 - ₱15.00</p>
+      </div>
+      <div class="grid-item" id="photo-print">
+        <img class="image" src="static/images/catalog/photo_print.png" />
+        <h5 class="titleCatalog">Photo Print</h5>
+        <p class="descCatalog">Price Range: ₱15.00 - ₱50.00</p>
+      </div>
+      <div class="grid-item" id="photocopy">
+        <img class="image" src="static/images/catalog/photocopy.png" />
+        <h5 class="titleCatalog">Photocopy</h5>
+        <p class="descCatalog">Price Range: ₱2.00 - ₱10.00</p>
+      </div>
+      <div class="grid-item" id="invitation">
+        <img class="image" src="static/images/catalog/invitation.png" />
+        <h5 class="titleCatalog">Invitation</h5>
+        <p class="descCatalog">Price Range: ₱15.00 - ₱25.00</p>
+      </div>
+      <div class="grid-item" id="id-picture">
+        <img class="image" src="static/images/catalog/id_picture.png" />
+        <h5 class="titleCatalog">ID Picture</h5>
+        <p class="descCatalog">Price Range: ₱30.00 - ₱40.00</p>
+      </div>
+      <div class="grid-item" id="lamination">
+        <img class="image" src="static/images/catalog/lamination.png" />
+        <h5 class="titleCatalog">Lamination</h5>
+        <p class="descCatalog">Price Range: ₱15.00 - ₱60.00</p>
+      </div>
+      <div class="grid-item" id="framed-picture">
+        <img class="image" src="static/images/catalog/framed_picture.png" />
+        <h5 class="titleCatalog">Framed Picture</h5>
+        <p class="descCatalog">Price Range: ₱150.00 - ₱250.00</p>
+      </div>
+      <div class="grid-item" id="printer">
+        <img class="image" src="static/images/catalog/printer.png" />
+        <h5 class="titleCatalog">Printer</h5>
+        <p class="descCatalog">Price Range: ₱2,500.00 - ₱4,500.00</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="redirect-services">
+    <div>
+      <h1 class="titleCatalog">SERVICES</h1>
+      <h5 class="titleCatalog" id='products-intro'>With Rod's Printing, you're not just getting a service – you're
+        gaining a partner
+        committed to bringing your vision to fruition with professionalism and care. Let us transform your projects into
+        masterpieces today!</h5>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item" id="printer-repair">
+        <img class="image" src="static/images/catalog/printer_repair.png" />
+        <h5 class="titleCatalog">Printer Repair</h5>
+        <p class="descCatalog">Price Range: ₱300.00 - ₱800.00</p>
+      </div>
+      <div class="grid-item" id="ciss-installation">
+        <img class="image" src="static/images/catalog/ciss_installation.png" />
+        <h5 class="titleCatalog">CISS Installation</h5>
+        <p class="descCatalog">Price Range: ₱1,200.00 - ₱2,000.00</p>
+      </div>
+      <div class="grid-item" id="defective-printer">
+        <img class="image" src="static/images/catalog/defective_printer.png" />
+        <h5 class="titleCatalog">Sell Defective Printer</h5>
+        <p class="descCatalog">Price Range: ₱300.00 - ₱1,200.00</p>
+      </div>
+      <div class="grid-item" id="online-appointment">
+        <img class="image" src="static/images/catalog/appointment_setting.png" />
+        <h5 class="titleCatalog">Appointment Setting</h5>
+        <p class="descCatalog">Price Range: ₱35.00 - ₱80.00</p>
+      </div>
+      <div class=" grid-item" id="resume-maker">
+        <img class="image" src="static/images/catalog/resume_maker.png" />
+        <h5 class="titleCatalog">Resume Maker</h5>
+        <p class="descCatalog">Price Range: ₱60.00 - ₱120.00</p>
+      </div>
+      <div class="grid-item" id="photo-editing">
+        <img class="image" src="static/images/catalog/photo_editing.png" />
+        <h5 class="titleCatalog">Photo Editing</h5>
+        <p class="descCatalog">Price Range: ₱30.00 - ₱100.00</p>
+      </div>
+    </div>
+
+  </section>
+
+  {% include 'components/footer.html' %}
+  <script src="static/script/catalog.js"></script>
+  <script src="static/script/topBar.js"></script>
 
 </body>
 

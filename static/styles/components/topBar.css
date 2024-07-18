@@ -1,0 +1,119 @@
+.top-nav {
+  background-color: #000000;
+  transition: top 0.3s ease;
+  z-index: 99;
+  /* Add transition for smoother appearance */
+
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  /* Ensure the bar spans the entire width */
+}
+
+.top-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav ul li {
+  float: left;
+  position: relative;
+}
+
+.top-nav ul li a {
+  display: block;
+  color: white;
+  /* Default font color */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.top-nav ul li a:hover {
+  color: #E6007E
+    /* Change this to the desired hover font color */
+}
+
+
+/* Keep the background color change for the dropdown on hover */
+.top-nav ul li:hover .dropdown {
+  background-color: #111;
+}
+
+
+
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown li {
+  float: none;
+}
+
+.dropdown li a {
+  padding: 12px 16px;
+}
+
+.top-nav ul li:hover .dropdown {
+  display: block;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.bossRodLogo {
+  margin-right: 500px;
+}
+
+.landing-page {
+  text-align: center;
+  padding: 50px;
+}
+
+.branding {
+  margin-bottom: 20px;
+}
+
+.highlights {
+  margin-top: 20px;
+}
+
+.highlights ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.highlights ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.highlights ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.highlights ul li a:hover {
+  background-color: #333;
+  color: white;
+}

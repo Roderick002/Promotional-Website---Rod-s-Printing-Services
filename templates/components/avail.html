@@ -1,0 +1,73 @@
+<div class="avail-form" id="avail-visibility">
+  <div class="avail-header">
+    <p id="avail-item">Availability Form</p>
+    <img id="close" src="static/images/icons/x.svg" alt="close button" />
+  </div>
+  <div class="avail-container">
+    <form id='availform' action="/" method="post">
+      <div class="personal-info">
+        <h4>PERSONAL INFORMATION</h4>
+        <div>
+          <input type="text" id="item-name" name="item-name" placeholder="item-name"
+            style="visibility: hidden; position: fixed">
+          <input type="text" id="name" name="name" required placeholder="Name">
+
+        </div>
+        <div class="contact">
+          <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
+          <input type="email" id="email" name="email" required placeholder="Email">
+        </div>
+      </div>
+      <div class="specifications">
+        <h4>SPECIFICATIONS</h4>
+        <div class="specs">
+          <div class="c-one">
+            <div class="sizes">
+              <p>SIZE <span>(IF APPLIES)</span></p>
+              <select id="size" name="size">
+                <option value="None">Choose Size</option>
+                <option value="Letter">Letter (8.5"x11")</option>
+                <option value="Legal">Legal (8.5"x11")</option>
+                <option value="A4">A4 (8.3"x11.7")</option>
+                <option value="4R">4R (4"x6")</option>
+                <option value="3R">3R (3.5"x5"</option>
+              </select>
+            </div>
+            <div class="colors">
+              <p>COLOR <span>(IF APPLIES)</span></p>
+              <select id="color" name="color">
+                <option value="None">Choose Color</option>
+                <option value="Colored">Colored</option>
+                <option value="Monochrome">Monochrome</option>
+              </select>
+            </div>
+            <div class="files">
+              <p>INSERT FILE <span>(IF APPLIES)</span></p>
+              <input type="file" id="insert-file" name="insert-file">
+            </div>
+          </div>
+          <div class="quantities">
+            <p>QUANTITY</p>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required >
+          </div>
+          <div class="descriptions">
+            <p>NOTE</p>
+            <textarea id="description" name="description" placeholder="Add description..."></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="delivery">
+        <h4>DELIVERY/HOME SERVICE <span style="color: #FF4F4F;">(OPTIONAL)</span></h4>
+        <div>
+          <input type="text" id="address" name="address" placeholder="Address">
+        </div>
+        <div>
+          <p>When do you need the item(s)?</p>
+          <input type="time" id="time" name="time" placeholder="Select Time">
+          <input type="date" id="date" name="date" placeholder="Select Date">
+        </div>
+      </div>
+      <input type="submit" value="Confirm Order" id="submit">
+    </form>
+  </div>
+</div>

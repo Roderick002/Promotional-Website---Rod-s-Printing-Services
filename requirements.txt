@@ -8,3 +8,8 @@ Jinja2==3.1.4
 MarkupSafe==2.1.5
 packaging==24.0
 Werkzeug==3.0.3
+Flask
+firebase-admin
+google-cloud-storage
+Flask-Mail
+python-dotenv

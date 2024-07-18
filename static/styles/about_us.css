@@ -1,0 +1,209 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.titleAboutUs {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.descAboutUs {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nameAboutUs {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.roleAboutUs {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+h2 {
+    margin: 5px 0;
+}
+
+
+#about-us-title {
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: inline-block;
+    letter-spacing: -2px;
+    font-size: 80px;
+    font-family: "Arimo", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    -webkit-text-stroke: 3px black;
+}
+
+/*#about-us-description {
+    position: absolute;
+    top: 360px; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: inline-block;
+    font-size: 30px;
+    letter-spacing: -2px;
+    font-style: italic;
+    -webkit-text-stroke: 2px black; 
+}
+*/
+
+.black-bg-about-us {
+    height: 250px;
+    background-color: #292929;
+}
+
+.catalog-bg-image {
+    width: 100%;
+    /* Make the image fill the entire width of its container */
+    height: 250px;
+    /* Set the height to 320 pixels */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
+}
+
+
+
+
+
+#team-description {
+    position: absolute;
+    font-size: 30px;
+    top: 474.5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.team-layout {
+    text-align: center;
+    /* Center align the content */
+
+    margin-top: 75px;
+}
+
+.team-column-container {
+    display: flex;
+    justify-content: center;
+    /* Center align the columns horizontally */
+    width: 50%;
+    margin: 0 auto;
+    /* Set left and right margins to auto to center the container */
+    height: 500px;
+    padding-top: 20px;
+}
+
+.team-column {
+    flex: 1;
+    /* Distribute equal space among columns */
+    background-color: #f2f2f2;
+    /* Background color for columns (adjust as needed) */
+    margin: 0;
+    /* Add some margin between columns */
+}
+
+.team1 {
+    background-color: #F3F3F3;
+}
+
+.team2 {
+    background-color: #DEDEDE;
+}
+
+
+#mission-name {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.team-layout p {
+    font-size: 1.2em;
+
+}
+
+.mission-layout {
+    text-align: center;
+    /* Center align the content */
+    padding-bottom: 30px;
+    margin-top: 75px;
+}
+
+.about-us-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 96px;
+}
+
+.about-us-intro p {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.history {
+    margin: 0 auto;
+    margin-top: 48px;
+    display: flex;
+    max-width: 960px;
+    gap: 32px;
+}
+
+.history p {
+    max-width: 800px;
+    text-indent: 40px;
+    text-align: justify;
+}
+
+.history img {
+    height: 480px;
+    width: 480px;
+    margin: auto 0;
+}
+
+.boss-rod img,
+.developers img {
+    height: 320px;
+    width: 320px;
+    margin-top: 32px;
+    border: #2e2e2e solid 8px;
+    border-radius: 8px;
+}
+
+.developers img {
+    height: 240px;
+    width: 240px;
+}
+
+.boss-rod h4,
+.developers h5 {
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.boss-rod p,
+.developers p {
+    font-size: 1em;
+}
+
+.developers {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 64px;
+}
