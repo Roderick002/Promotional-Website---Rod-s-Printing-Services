@@ -4,16 +4,8 @@
       {
         "id": "909bdc52-432b-40c6-90ee-aec38c571712",
         "line": 1,
-        "version": 401,
+        "version": 418,
         "index": 0
-      }
-    ],
-    "templates/index.html": [
-      {
-        "id": "0a023203-d3ce-485c-9e90-c083c50fa5fd",
-        "line": 26,
-        "version": 1652,
-        "index": 1041
       }
     ]
   }

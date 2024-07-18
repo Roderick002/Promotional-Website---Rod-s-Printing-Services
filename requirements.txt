@@ -12,3 +12,4 @@ Flask
 firebase-admin
 google-cloud-storage
 Flask-Mail
+python-dotenv

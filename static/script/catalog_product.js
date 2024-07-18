@@ -67,6 +67,4 @@ function setProductSnapshots(product) {
     img3.src = image3.src;
     img4.src = image4.src;
     img5.src = image5.src;
-
-    alert(image1.src)
 }
