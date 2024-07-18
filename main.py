@@ -7,6 +7,13 @@ from google.cloud.storage import bucket
 from flask_mail import Mail, Message
 from datetime import datetime
 
+app = Flask(__name__)
+app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = 'rodsprintingservices@gmail.com'
+app.config['MAIL_PASSWORD'] = 'epan yviw ygcw evkp'
+app.config['MAIL_USE_TLS'] = True
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -32,15 +39,7 @@ firebase_admin.initialize_app(
         'storageBucket': os.getenv("FIREBASE_STORAGE_BUCKET")
     })
 
-bucket = storage.bucket()
 ref = db.reference("/firebase")
-
-app = Flask(__name__)
-app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] = 'rodsprintingservices@gmail.com'
-app.config['MAIL_PASSWORD'] = 'epan yviw ygcw evkp'
-app.config['MAIL_USE_TLS'] = True
 
 mail = Mail(app)
 
@@ -133,7 +132,7 @@ def catalog_product():
                       sender='no-reply@rodsprintingservices',
                       recipients=[email])
 
-        msg.html = "<br> Greetings <b> " + name + "</b>, <br> <br> Thank you for choosing Rod's Printing Services for your printing needs! <br><br>We are pleased to inform you that we have successfully received your order. Below are the details of <br> your order for your reference: <br> <br> ORDER INFORMATION: <br> <b>Product/Service:</b> " + item + "<br> <b>Date   of Order: </b>" + dateFormat + "<br> <b>Address: </b>" + address + " <br> <b>Scheduled Time:</b>" + time + " <br><b>Scheduled Date: </b>" + date + " <br> <br> SPECIFICATIONS: <br> <b>Size: </b>" + size + "<br> <b>Color: </b>" + color + "<br> <b>Quantity: </b>" + quantity + " <br> <br>Our team is currently processing your order and will ensure that it is completed with the highest <br> quality and delivered to you in a timely manner. We will keep you updated on the status of your <br> order and will contact you ASAP to discuss the details <br> <br> If you have any   questions or need further assistance, please do not hesitate to contact us <br> <br> Thank you for choosing Rod's Printing Services! <br> <br> Best regards, <br><br> <i>Mr. Roderick Palmes</i> <br> <i>Business Owner</i> <br> <i>Rod's Printing Services</i> <br> <i>www.rodsprintingservices.com</i>"
+        msg.html = "<br> Greetings <b> " + name + "</b>, <br> <br> Thank you for choosing Rod's Printing Services for your printing needs! <br><br>We are pleased to inform you that we have successfully received your order. Below are the details of <br> your order for your reference: <br> <br> ORDER INFORMATION: <br> <b>Product/Service:</b> " + item + "<br> <b>Date   of Order: </b>" + dateFormat + "<br> <b>Address: </b>" + address + " <br> <b>Scheduled Time:</b>" + time + " <br><b>Scheduled Date: </b>" + date + " <br> <br> SPECIFICATIONS: <br> <b>Size: </b>" + size + "<br> <b>Color: </b>" + color + "<br> <b>Quantity: </b>" + quantity + " <br> <br>Our team is currently processing your order and will ensure that it is completed with the highest <br> quality and delivered to you in a timely manner. We will keep you updated on the status of your <br> order and will contact you ASAP to discuss the details <br> <br> If you have any   questions or need further assistance, please do not hesitate to contact us <br> <br> Thank you for choosing Rod's Printing Services! <br> <br> Best regards, <br><br> <i>Mr. Roderick Palmes</i> <br> <i>Business Owner</i> <br> <i>Rod's Printing Services</i> <br> <i>https://rods-printing-services-jibu.onrender.com/</i>"
 
         mail.send(msg)
     return render_template('catalog_product.html')
@@ -220,7 +219,7 @@ def catalog_services():
                       sender='no-reply@rodsprintingservices',
                       recipients=[email])
 
-        msg.html = "<br> Greetings <b> " + name + "</b>, <br> <br> Thank you for choosing Rod's Printing Services for your printing needs! <br><br>We are pleased to inform you that we have successfully received your order. Below are the details of <br> your order for your reference: <br> <br> ORDER INFORMATION: <br> <b>Product/Service:</b> " + item + "<br> <b>Date   of Order: </b>" + dateFormat + "<br> <b>Address: </b>" + address + " <br> <b>Scheduled Time:</b>" + time + " <br><b>Scheduled Date: </b>" + date + " <br> <br> SPECIFICATIONS: <br> <b>Size: </b>" + size + "<br> <b>Color: </b>" + color + "<br> <b>Quantity: </b>" + quantity + " <br> <br>Our team is currently processing your order and will ensure that it is completed with the highest <br> quality and delivered to you in a timely manner. We will keep you updated on the status of your <br> order and will contact you ASAP to discuss the details <br> <br> If you have any   questions or need further assistance, please do not hesitate to contact us <br> <br> Thank you for choosing Rod's Printing Services! <br> <br> Best regards, <br><br> <i>Mr. Roderick Palmes</i> <br> <i>Business Owner</i> <br> <i>Rod's Printing Services</i> <br> <i>www.rodsprintingservices.com</i>"
+        msg.html = "<br> Greetings <b> " + name + "</b>, <br> <br> Thank you for choosing Rod's Printing Services for your printing needs! <br><br>We are pleased to inform you that we have successfully received your order. Below are the details of <br> your order for your reference: <br> <br> ORDER INFORMATION: <br> <b>Product/Service:</b> " + item + "<br> <b>Date   of Order: </b>" + dateFormat + "<br> <b>Address: </b>" + address + " <br> <b>Scheduled Time:</b>" + time + " <br><b>Scheduled Date: </b>" + date + " <br> <br> SPECIFICATIONS: <br> <b>Size: </b>" + size + "<br> <b>Color: </b>" + color + "<br> <b>Quantity: </b>" + quantity + " <br> <br>Our team is currently processing your order and will ensure that it is completed with the highest <br> quality and delivered to you in a timely manner. We will keep you updated on the status of your <br> order and will contact you ASAP to discuss the details <br> <br> If you have any   questions or need further assistance, please do not hesitate to contact us <br> <br> Thank you for choosing Rod's Printing Services! <br> <br> Best regards, <br><br> <i>Mr. Roderick Palmes</i> <br> <i>Business Owner</i> <br> <i>Rod's Printing Services</i> <br> <i>https://rods-printing-services-jibu.onrender.com/</i>"
 
         mail.send(msg)
 
